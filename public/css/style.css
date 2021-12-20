@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
 body, html {
 	height: 100%;
 	cursor: default;
 	scroll-behavior: smooth;
-	background-image: url("../img/background.png");
+	font-family: 'Karla', sans-serif;
 }
 
 * {
