@@ -1,0 +1,16 @@
+body, html {
+	height: 100%;
+	cursor: default;
+	scroll-behavior: smooth;
+	background-image: url("../img/background.png");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+profile img { 
+    border-radius: 150%; 
+    width: 256px;
+    height: 256px;
+}
