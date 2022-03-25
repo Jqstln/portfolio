@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
+
+/* 
+  MAIN PART
+*/ 
+
 html {
     min-height: 100%;
     overflow: hidden;
@@ -7,29 +12,27 @@ html {
 
 body {
     height: calc(100vh - 8em);
+    background-color: rgb(92, 92, 91);
     padding: 4em;
-    font-family: 'Anonymous Pro', monospace;  
+    font-family: 'Anonymous Pro', monospace; 
+    font-size: large; 
 }
 
-.line-1 {
-    position: relative;
-    top: 50%;  
-    width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);    
+/* 
+  PROFILE PART
+*/ 
+
+.profile img {
+  border-radius: 430px;
+  width: 192px;
+  height: 192px;
 }
 
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 50em;}
+/* 
+  SOCIALS PARTS
+*/
+
+.socials icons {
+  width: 64px;
+  height: 64px;
 }
