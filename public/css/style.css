@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
 
 /* 
@@ -14,7 +14,7 @@ body {
     height: calc(100vh - 8em);
     background-color: rgb(92, 92, 91);
     padding: 4em;
-    font-family: 'Anonymous Pro', monospace; 
+    font-family: 'Oxygen', sans-serif;
     font-size: large; 
 }
 
