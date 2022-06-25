@@ -1,38 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-
-
-/* 
-  MAIN PART
-*/ 
-
-html {
-    min-height: 100%;
-    overflow: hidden;
+html, body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    height: calc(100vh - 8em);
-    background-color: rgb(92, 92, 91);
-    padding: 4em;
-    font-family: 'Oxygen', sans-serif;
-    font-size: large; 
+  background-color: #6E6E6E;
 }
 
-/* 
-  PROFILE PART
-*/ 
-
-.profile img {
-  border-radius: 430px;
-  width: 192px;
-  height: 192px;
-}
-
-/* 
-  SOCIALS PARTS
-*/
-
-.socials icons {
-  width: 64px;
-  height: 64px;
+.background {
+  position: absolute;
+  display:block; 
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
