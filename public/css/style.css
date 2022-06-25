@@ -15,3 +15,22 @@ body {
   left: 0;
   z-index: 0;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: -20%;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
