@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+  background-color: #0D1117;
+  font-family: 'Karla', sans-serif;
+  padding-top: 15vh;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+p {
+  font-size: 1.8em;
+}
+
+.name {
+  opacity: 50%;
+}
+
+.location {
+  color: #93B7FF;
+}
+
+.dev {
+  color: #FFAEA9;
+}
+
+.like {
+  color: #A7F9EA;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  color: #0358FE;
+  text-decoration: none !important;
+}
+
+.legal {
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+
+}
+
+.legal a {
+  color: #b1cbff;
+}
+
+#mail {
+  color: white;
+}
+
+#mail:hover {
+  color: #0358FE;
+}
