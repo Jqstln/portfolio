@@ -20,6 +20,10 @@ p {
   opacity: 50%;
 }
 
+.namecolor {
+  color: white;
+}
+
 .location {
   color: #93B7FF;
 }
@@ -29,7 +33,7 @@ p {
 }
 
 .like {
-  color: #A7F9EA;
+  color: #8fd1c5;
 }
 
 img {
@@ -45,8 +49,7 @@ a {
 .legal {
   position: absolute;
   bottom: 0;
-  font-size: 15px;
-
+  font-size: 19px;
 }
 
 .legal a {
@@ -58,5 +61,5 @@ a {
 }
 
 #mail:hover {
-  color: #0358FE;
+  color: rgb(197, 197, 197);
 }
