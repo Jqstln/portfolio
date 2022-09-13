@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 
 body {
-  background-color: #0D1117;
-  font-family: 'Karla', sans-serif;
+  background-color: #0d1117;
+  font-family: "Karla", sans-serif;
   padding-top: 15vh;
   color: white;
   text-align: center;
@@ -27,11 +27,11 @@ p {
 }
 
 .location {
-  color: #93B7FF;
+  color: #93b7ff;
 }
 
 .dev {
-  color: #FFAEA9;
+  color: #ffaea9;
 }
 
 .like {
@@ -44,7 +44,7 @@ img {
 }
 
 a {
-  color: #0358FE;
+  color: #0358fe;
   text-decoration: none !important;
 }
 
@@ -70,9 +70,9 @@ a {
 
 .projects {
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
+  flex-basis: 100px;
 }
 
 .projects img {
@@ -83,7 +83,26 @@ a {
 }
 
 .projects img:hover {
-  -webkit-transform:scale(1.1);
-      -ms-transform:scale(1.1);
-          transform:scale(1.1);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* Buttons for the main site */
+.button {
+  background-color: #5c44c7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  text-align: center;
+  display: inline-block;
+  font-size: 17px;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #352775; /* Green */
+  cursor: pointer;
 }
