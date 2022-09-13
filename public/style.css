@@ -8,6 +8,8 @@ body {
   text-align: center;
 }
 
+/* Text */
+
 h1 {
   font-size: 5em;
 }
@@ -62,4 +64,26 @@ a {
 
 #mail:hover {
   color: rgb(197, 197, 197);
+}
+
+/* Animations for the images */
+
+.projects {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
+}
+
+.projects img {
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin-bottom: 7px;
+}
+
+.projects img:hover {
+  -webkit-transform:scale(1.1);
+      -ms-transform:scale(1.1);
+          transform:scale(1.1);
 }
