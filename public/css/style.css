@@ -1,0 +1,59 @@
+@import "https://fonts.googleapis.com/css2?family=Karla&display=swap";
+body {
+  @apply bg-[#0d1117] text-white text-center pt-[15vh];
+  font-family: karla, sans-serif;
+}
+h1 {
+  @apply text-[5em];
+}
+p {
+  @apply text-[1.8em];
+}
+.name {
+  @apply opacity-[50%];
+}
+.namecolor {
+  @apply text-white;
+}
+.location {
+  @apply text-[#93b7ff];
+}
+.dev {
+  @apply text-[#ffaea9];
+}
+.like {
+  @apply text-[#8fd1c5];
+}
+img {
+  @apply w-[50px] h-[50px];
+}
+a {
+  @apply text-[#0358fe] no-underline;
+}
+.legal {
+  @apply absolute text-[19px] bottom-0;
+}
+.legal a {
+  @apply text-[#b1cbff];
+}
+#mail {
+  @apply text-white hover:text-[#c5c5c5];
+}
+.projects {
+  @apply justify-around basis-[100px];
+  -ms-flex-pack: distribute;
+  -ms-flex-preferred-size: 100px;
+}
+.projects img {
+  @apply transition-all duration-[0.2s] ease-[ease] mb-[7px] hover:scale-[1.2];
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.projects img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+.button {
+  @apply bg-[#5c44c7] text-white text-center inline-block text-[17px] font-bold px-[30px] py-[15px] rounded-xl border-[none] hover:bg-[#352775] hover:cursor-pointer;
+  font-family: karla, sans-serif;
+}
