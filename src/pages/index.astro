@@ -1,0 +1,27 @@
+---
+import Head from "../layout/Head.astro";
+import MainLayout from "../layout/MainLayout.astro";
+---
+
+<Head title="Justinnn" />
+<MainLayout>
+  <div class="flex flex-col items-center justify-center gap-12 px-5 py-16">
+	<div class="navbar items-start">
+		<a href="/projects" class="nav-text font-semibold uppercase">Projects</a>
+		<a href="/contact" class="nav-text font-semibold uppercase">Contact Me</a>
+	</div>
+    <h1 class="text-4xl font-bold tracking-tight text-white sm:text-[4rem] text-center">
+      justinnn.<span class="text-[hsl(280,100%,70%)]">dev</span>
+    </h1>
+	<h3 class="text-medium font-small tracking-tight text-slate-400 sm:text-[22.5px] text-center">
+		<p>Hey, I'm Justin from The <span class="text-[hsl(280,100%,70%)]">Netherlands</span>!
+			<br>I'm a 18-year old developer that is skilled in creating code in HTML, CSS, JS, and currently learning <b>Lua</b>.
+		</p>
+		<p><br>Besides development and even 'programming', I go to <b>big parties</b> in the Netherlands, or sometimes to parties in the UK.</p>
+	</h3>
+    <div class="flex flex-row gap-8">
+		<a href="https://github.com/Jqstln"><i class="devicon-github-original text-5xl"></i></a>
+		<a href="https://twitter.com/Jqstln"><i class="devicon-twitter-original colored text-5xl"></i></a>
+    </div>
+  </div>
+</MainLayout>

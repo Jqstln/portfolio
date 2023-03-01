@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-text {
+    color: gainsboro;
+    font-size: 16.4px;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-bottom: 5px;
+}
+
+.nav-text:hover {
+    border-bottom: 3.9px solid rgb(93, 255, 247);
+    margin-bottom: 2px;
+}
