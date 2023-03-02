@@ -2,57 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==== Scrollbar ==== */
+::-webkit-scrollbar {
+    width: 7.5px
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2836;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #313953;
+    border-radius: 5px
+}
+
 .nav-text {
     color: gainsboro;
     font-size: 16.4px;
     margin-left: 35px;
     margin-right: 35px;
     padding-bottom: 5px;
+    position: relative;
 }
 
-.nav-text:hover {
-    border-bottom: 3.9px solid rgb(93, 255, 247);
-    margin-bottom: 2px;
+.nav-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3.9px;
+    width: 0;
+    border-bottom: 3.9px solid transparent;
+    transition: width 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.nav-text:active {
-    border-bottom: 3.9px solid rgb(74, 247, 126);
-    margin-bottom: 2px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-}
-
-.price {
-    color: grey;
-    font-size: 22px;
-}
-
-.card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
+.nav-text:hover::after {
     width: 100%;
-    font-size: 18px;
-}
-
-.card button:hover {
-    opacity: 0.7;
+    border-color: rgb(131, 22, 158);
 }
 
 #hover-icon {
-    color: #000;
+    color: #fff;
+    transition: color 0.3s ease-out;
 }
 
 #hover-icon:hover {
-    color: #838282;
+    color: purple;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.card {
+    width: calc((100% / 3) - 20px);
+    margin: 10px;
+    border: 1px solid #3e516b;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-content {
+    background-color: #3e516b;
+    padding: 10px;
+    text-align: center;
+}
+
+.card h2 {
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.card button {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 85%;
+        margin: 10px auto;
+    }
 }
