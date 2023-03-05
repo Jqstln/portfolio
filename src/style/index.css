@@ -76,6 +76,7 @@ html {
     height: auto;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    min-height: 100px; /* set a minimum height */
 }
 
 .card-content {
