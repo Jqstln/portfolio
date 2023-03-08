@@ -59,9 +59,9 @@ html {
     justify-content: center;
     max-width: 960px;
     margin: 0 auto;
-}
-
-.card {
+  }
+  
+  .card {
     width: calc((100% / 3) - 20px);
     margin: 10px;
     border: 1px solid #3e516b;
@@ -69,46 +69,50 @@ html {
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease-in-out;
-}
-
-.card img {
+  }
+  
+  .card img {
     width: 100%;
     height: auto;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    min-height: 100px; /* set a minimum height */
-}
-
-.card-content {
+  }
+  
+  .card-content {
     background-color: #3e516b;
     padding: 10px;
     text-align: center;
-}
-
-.card h2 {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card h2 {
     font-weight: bolder;
     font-size: 1.2em;
     margin-bottom: 10px;
-}
-
-.card-desc {
+  }
+  
+  .card-desc {
     font-size: 1em;
     margin-bottom: 10px;
-}
-
-.card button {
+  }
+  
+  .card button {
     display: block;
     margin: auto;
     margin-top: 10px;
-}
-
-.card:hover {
+  }
+  
+  .card:hover {
     transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .card {
-        width: 85%;
-        margin: 10px auto;
+      width: 85%;
+      margin: 10px auto;
     }
-}
+  }
