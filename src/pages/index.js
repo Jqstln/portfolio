@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
       <canvas id="my-canvas" className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></canvas>
-      <div className="pb-64 flex gap-4 md:pt-12 sm:pt-12">
+      <div className="pb-8 md:pb-24 flex gap-4 md:pt-12 sm:pt-12"> {/* Use smaller padding on smaller screens */}
         <a className="bg-emerald-900 rounded-full w-40 h-14 hover:bg-emerald-500 duration-200 transition text-white text-center font-semibold flex justify-center items-center px-4 py-2" href="/projects">
           <span className="text-xl">Projects</span>
         </a>
@@ -37,7 +37,7 @@ export default function Home() {
           <span className="text-xl">Contact Me</span>
         </a>
       </div>
-      <div className="socials flex gap-4">
+      <div className="socials flex gap-4 pt-4"> {/* Add pt-4 class to add top padding */}
         <a href="https://github.com/Jqstln" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-200 duration-300 transition">
           <Github size={48} />
         </a>
