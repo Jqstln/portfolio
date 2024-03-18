@@ -1,6 +1,7 @@
 import Confetti from 'confetti-js';
 import { Inter } from "next/font/google";
 import { Github, Twitter } from "lucide-react";
+import Head from 'next/head'; // Import Head component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,9 @@ export default function Home() {
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-between pt-12 md:pt-48 font-sans">
+      <Head>
+        <title>Justinnn</title>
+      </Head>
       <div className="header text-center text-slate-400 mx-auto">
         <h1 className="font-bold text-7xl bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:whitespace-nowrap">Hey! <br className="md:hidden" /> I&apos;m Justin</h1>
         <h2 className="text-2xl text-center font-bold">Full Stack Web Developer</h2>
