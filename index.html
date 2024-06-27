@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justinnn</title>          
-    <link rel="stylesheet" href="public/style.css">
+    <title>Justinnn</title>
     <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+        body {
+            font-family: 'Karla', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hey! <span class="name">My name is </span><span class="namecolor">Justin.</span></h1>
-    <p>I'm a <span class="dev">developer</span> and especially a <span class="dev">gamer</span> based in <span class="location">The Netherlands</span>. Besides <br>
-        development, I like <span class="like">animals</span>, and having <span class="like">parties</span>.
-    </p>
-    <p>
-        <br><a href="https://github.com/Jqstln" title="GitHub">
-            <img src="static/github.svg" alt="GitHub">
-        </a>
-        &nbsp;
-        <a href="https://twitter.com/Jqstln" title="Twitter">
-            <img src="static/twitter.svg" alt="Twitter">
-        </a>
-        <br><br><a href="projects.html"><button class="button button1">My projects</button></a>
-    </p>
+
+<body class="bg-gradient-to-tr from-gray-900 to-neutral-900 text-white flex items-center justify-center min-h-screen">
+    <div class="text-center">
+        <h1 class="text-6xl font-bold">Hey! I'm Justin.</h1>
+        <p class="text-2xl mt-4 max-w-3xl mx-auto">
+            I'm a <span class="text-pink-300">frontend developer</span> based in
+            <a href="https://wikipedia.org/wiki/Netherlands" target="_blank" class="text-teal-300 hover:underline underline-offset-4 transition duration-300 hover:text-teal-500">
+                The Netherlands
+            </a>. I also work on various other projects. Besides development, I enjoy 
+            <a href="#" id="gaming-link" class="text-teal-300 hover:underline underline-offset-4 transition duration-300 hover:text-teal-500">gaming with friends</a>, 
+            taking care of my 
+            <a href="https://photos.app.goo.gl/wgKrqpwLoE4EpFGK8" target="_blank" class="text-teal-300 hover:underline underline-offset-4 transition duration-300 hover:text-teal-500">cat</a>, 
+            and going to 
+            <a href="https://youtu.be/n7ov86BPdR8" target="_blank" class="text-teal-300 hover:underline underline-offset-4 transition duration-300 hover:text-teal-500">parties</a>.
+        </p>
+        <div class="mt-6 flex justify-center space-x-6">
+            <a href="https://github.com/Jqstln" title="GitHub" class="group">
+                <svg width="48" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github group-hover:stroke-gray-500 transition duration-200">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://twitter.com/Jqstln" title="Twitter" class="group">
+                <svg width="48" height="64" viewBox="0 0 300 300.251" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" class="group-hover:fill-gray-600 transition duration-200">
+                    <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="mt-6">
+            <a href="projects.html">
+                <button class="bg-orange-500 hover:bg-orange-800 transition duration-300 text-white font-bold py-3 px-6 rounded-lg">My Projects</button>
+            </a>
+            <a href="contact.html">
+                <button class="bg-orange-500 hover:bg-orange-800 transition duration-300 text-white font-bold py-3 px-6 rounded-lg">Contact Me</button>
+            </a>
+        </div>
+    </div>
+
+    <div id="video-popup" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div class="relative w-4/5">
+            <button id="close-video-popup" class="absolute top-2 right-2 text-white text-2xl">&times;</button>
+            <video id="popup-video" class="w-full" controls autoplay>
+                <source src="static/AT-cm_WzA0I3UOYK5I6_3Rjt9btA.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('gaming-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            const videoPopup = document.getElementById('video-popup');
+            const video = document.getElementById('popup-video');
+            videoPopup.classList.remove('hidden');
+            video.play();
+            video.onended = function () {
+                videoPopup.classList.add('hidden');
+            };
+        });
+
+        document.getElementById('close-video-popup').addEventListener('click', function () {
+            const videoPopup = document.getElementById('video-popup');
+            const video = document.getElementById('popup-video');
+            video.pause();
+            videoPopup.classList.add('hidden');
+        });
+
+        document.addEventListener('click', function (e) {
+            const videoPopup = document.getElementById('video-popup');
+            const video = document.getElementById('popup-video');
+            if (!videoPopup.classList.contains('hidden') && !videoPopup.contains(e.target) && !e.target.matches('#gaming-link')) {
+                video.pause();
+                videoPopup.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
+
 </html>

@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justinnn - projects</title>
-    <link rel="stylesheet" href="public/style.css"/>
+    <title>Justinnn - Projects</title>
     <link rel="icon" type="image/x-icon" href="static/favicon.ico">
-    <meta name="robots" content="noindex">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+        body {
+            font-family: 'Karla', sans-serif;
+        }
+    </style>
 </head>
-<body>
-    <h3>My current projects</h3>
-    <div class="projects">
-        <a href="https://celendi.gg/"><img src="static/celendibanner.png" alt="Celendi" style="width: 300px; height:auto"></a><br><br>
+
+<body class="bg-gradient-to-tr from-gray-900 to-neutral-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
+    <div class="text-center mb-10">
+        <h1 class="text-6xl font-bold mb-6">Projects</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/projects/oasemc.html" class="relative overflow-hidden rounded-lg group">
+                <img src="https://placehold.co/384x384" alt="Project 1" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:blur-sm">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-white text-xl font-bold">OaseMC</span>
+                </div>
+            </a>
+            <a href="/projects/project-page2.html" class="relative overflow-hidden rounded-lg group">
+                <img src="https://placehold.co/384x384" alt="Project 2" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:blur-sm">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-white text-xl font-bold">Project 2</span>
+                </div>
+            </a>
+            <a href="/projects/project-page3.html" class="relative overflow-hidden rounded-lg group">
+                <img src="https://placehold.co/384x384" alt="Project 3" class="w-full h-full object-cover transition-transform duration-300 transform group-hover:scale-110 group-hover:blur-sm">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-white text-xl font-bold">Project 3</span>
+                </div>
+            </a>
+        </div>
+        <div class="mt-10">
+            <a href="/">
+                <button class="bg-orange-500 hover:bg-orange-800 transition duration-300 text-white font-bold py-3 px-6 rounded-lg">Go back</button>
+            </a>
+        </div>
     </div>
-    <a href="mailto:hello@justinnn.dev" id="mail"><p><br><br>Email: hello@justinnn.dev</p></a>
-    <br><br><a href="/"><button class="button button1">Go back</button></a>
 </body>
+
 </html>
