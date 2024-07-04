@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <div className="text-center">
         <h1 className="text-6xl font-bold">Hey! I'm Justin.</h1>
         <p className="mx-auto mt-4 max-w-3xl text-2xl">
-          I'm a <span className="text-pink-300">frontend developer</span> based in{" "}
+          I'm a <span className="text-pink-300">frontend developer</span> based in{' '}
           <Link
             href="https://youtu.be/eE_IUPInEuc"
             target="_blank"
@@ -15,7 +15,7 @@ export default function Home() {
           >
             The Netherlands
           </Link>
-          . I also work on various other projects. Besides development, I enjoy{" "}
+          . I also work on various other projects. Besides development, I enjoy{' '}
           <Link
             href="https://youtu.be/nQk6vG5iqhA"
             target="_blank"
@@ -23,7 +23,7 @@ export default function Home() {
           >
             gaming with friends
           </Link>
-          , taking care of my{" "}
+          , taking care of my{' '}
           <Link
             href="https://photos.app.goo.gl/wgKrqpwLoE4EpFGK8"
             target="_blank"
@@ -31,7 +31,7 @@ export default function Home() {
           >
             cat
           </Link>
-          , and going to{" "}
+          , and going to{' '}
           <Link
             href="https://youtu.be/n7ov86BPdR8"
             target="_blank"

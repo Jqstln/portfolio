@@ -1,8 +1,8 @@
 // src/app/projects/[project]/page.js
 
 import Link from 'next/link';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function OaseMCProject() {
   const codeString = `@EventHandler
@@ -58,11 +58,11 @@ public void onPlayerMove(PlayerMoveEvent event) {
           />
         </div>
       </div>
-      <h2 className="mb-6 text-center text-lg font-bold md:text-xl">
+      <h2 className="mb-6 text-left text-lg font-bold md:text-xl">
         Sample code used for a plugin in OaseMC
       </h2>
-      <div className="mx-auto mb-12 w-full overflow-y-auto rounded-lg bg-[#282C34] p-4 text-white">
-        <SyntaxHighlighter language="java" style={atomOneDark}>
+      <div className="mx-auto mb-12 w-full overflow-y-auto rounded-lg bg-[#1D1F21] p-4 text-white">
+        <SyntaxHighlighter language="java" showLineNumbers="true" style={atomDark}>
           {codeString}
         </SyntaxHighlighter>
       </div>

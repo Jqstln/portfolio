@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`bg-gradient-to-tr from-gray-900 to-neutral-900 text-white flex items-center justify-center min-h-screen ${karla.className}`}>
+      <body
+        className={`flex min-h-screen items-center justify-center bg-gradient-to-tr from-gray-900 to-neutral-900 text-white ${karla.className}`}
+      >
         {children}
       </body>
     </html>
