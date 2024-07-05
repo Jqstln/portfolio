@@ -16,35 +16,35 @@ export default function Projects() {
               src={`https://cdn.justinnn.dev/web/oasemc.png`}
               width={384}
               height={384}
-              alt="Project 1"
+              alt="OaseMC"
               className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="text-xl font-bold text-white">OaseMC</span>
             </div>
           </Link>
-          <Link href="" className="group relative overflow-hidden rounded-lg">
+          <Link href="projects/aloramc" className="group relative overflow-hidden rounded-lg">
             <Image
-              src={`https://placehold.co/384x384`}
+              src={`https://cdn.justinnn.dev/web/aloramc.png`}
               width={384}
               height={384}
-              alt="Project 1"
+              alt="AloraMC"
               className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <span className="text-xl font-bold text-white">Project 2</span>
+              <span className="text-xl font-bold text-white">AloraMC</span>
             </div>
           </Link>
-          <Link href="" className="group relative overflow-hidden rounded-lg">
+          <Link href="/projects/arc8" className="group relative overflow-hidden rounded-lg">
             <Image
-              src={`https://placehold.co/384x384`}
+              src={`https://cdn.justinnn.dev/web/arc8.png`}
               width={384}
               height={384}
-              alt="Project 1"
+              alt="ARC8"
               className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <span className="text-xl font-bold text-white">Project 3</span>
+              <span className="text-xl font-bold text-white">ARC8</span>
             </div>
           </Link>
         </div>

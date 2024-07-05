@@ -1,0 +1,27 @@
+- .eslintrc.json
+- .gitignore
+- .prettierrc.json
+- bun.lockb
+- jsconfig.json
+- LICENSE
+- next.config.mjs
+- package-lock.json
+- package.json
+- postcss.config.mjs
+- public
+  - favicon.ico
+  - github.svg
+  - x.svg
+- README.md
+- src
+  - app
+    - contact
+      - page.js
+    - globals.css
+    - layout.js
+    - page.js
+    - projects
+      - page.js
+      - [oasemc]
+        - page.js
+- tailwind.config.js
