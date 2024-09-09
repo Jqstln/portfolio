@@ -4,6 +4,10 @@ import { useRef, useState } from 'react';
 import { MailCheck } from 'lucide-react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
+export const metadata = {
+  title: 'Justinnn — Contact Me',
+};
+
 export default function Projects() {
   const [notification, setNotification] = useState(null);
 
