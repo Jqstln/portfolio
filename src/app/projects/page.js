@@ -15,7 +15,7 @@ export default function Projects() {
           <div className="group relative overflow-hidden rounded-lg">
             <div className="relative mx-auto h-80 w-80">
               <Image
-                src={`https://cdn.justinnn.dev/web/oasemc.png`}
+                src={`https://s3.justinnn.dev/web/oasemc.png`}
                 width={512}
                 height={512}
                 alt="OaseMC"
@@ -40,7 +40,7 @@ export default function Projects() {
           <div className="group relative overflow-hidden rounded-lg">
             <div className="relative mx-auto h-80 w-80">
               <Image
-                src={`https://cdn.justinnn.dev/web/aloramc.png`}
+                src={`https://s3.justinnn.dev/web/aloramc.png`}
                 width={512}
                 height={512}
                 alt="AloraMC"
@@ -64,7 +64,7 @@ export default function Projects() {
           <div className="group relative overflow-hidden rounded-lg">
             <div className="relative mx-auto h-80 w-80">
               <Image
-                src={`https://cdn.justinnn.dev/web/arc8.png`}
+                src={`https://s3.justinnn.dev/web/arc8.png`}
                 width={512}
                 height={512}
                 alt="ARC8"
@@ -88,7 +88,7 @@ export default function Projects() {
           <div className="group relative overflow-hidden rounded-lg">
             <div className="relative mx-auto h-80 w-80">
               <Image
-                src={`https://cdn.justinnn.dev/web/spectrumspark.png`}
+                src={`https://s3.justinnn.dev/web/spectrumspark.png`}
                 width={512}
                 height={512}
                 alt="Spectrumspark"

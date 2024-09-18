@@ -4,7 +4,7 @@ const nextConfig = {
     trailingSlash: true,
     images: {
         remotePatterns: [
-            { protocol: "https", hostname: "cdn.justinnn.dev" },
+            { protocol: "https", hostname: "s3.justinnn.dev" },
             { protocol: "https", hostname: "placehold.co" },
         ],
         dangerouslyAllowSVG: true,
