@@ -23,14 +23,14 @@ export default function Projects() {
                 className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
-            <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="bg-opacity-60 absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="text-xl font-bold text-white">OaseMC</span>
               <span className="w-full max-w-60 text-center text-lg text-white">
                 OaseMC, a Dutch Minecraft server with many game modes, but the primary focus is on
                 survival.
               </span>
               <Link href="https://oasemc.nl/links">
-                <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+                <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
                   Website
                 </button>
               </Link>
@@ -47,14 +47,14 @@ export default function Projects() {
                 className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
-            <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="bg-opacity-60 absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="text-xl font-bold text-white">AloraMC</span>
               <span className="w-full max-w-60 text-center text-lg text-white">
                 AloraMC, an English Minecraft server that focuses on good game modes and currently
                 primarily on CaveBlock.
               </span>
               <Link href="https://aloramc.com/">
-                <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+                <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
                   Website
                 </button>
               </Link>
@@ -71,14 +71,14 @@ export default function Projects() {
                 className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
-            <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="bg-opacity-60 absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="text-xl font-bold text-white">ARC8</span>
               <span className="w-full max-w-60 text-center text-lg text-white">
                 ARC8, an discord bot that has a few games, like counting to 100 (without losing) and
                 dice rolling and a lot more!
               </span>
               <Link href="https://arc8.fun/">
-                <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+                <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
                   Website
                 </button>
               </Link>
@@ -95,25 +95,23 @@ export default function Projects() {
                 className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
-            <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="bg-opacity-60 absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <span className="text-xl font-bold text-white">Spectrumspark</span>
               <span className="w-full max-w-60 text-center text-lg text-white">
                 SpectrumSpark empowers neurodiverse individuals through resources, advocacy, and
                 education, fostering inclusion and celebrating unique strengths.
               </span>
               <Link href="https://spectrumspark.org/">
-                <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+                <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
                   Website
                 </button>
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Button at the bottom */}
         <div className="mt-10">
           <Link href="/">
-            <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+            <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
               Go back
             </button>
           </Link>

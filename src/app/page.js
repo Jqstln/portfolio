@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Justinnn',
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col items-center text-center">
       <h1 className="text-6xl font-bold">Hey! I'm Justin.</h1>
@@ -43,8 +43,6 @@ export default function Home() {
         </Link>
         .
       </p>
-
-      {/* Social Links */}
       <div className="mt-6 flex justify-center space-x-6">
         <Link href="https://github.com/Jqstln" title="GitHub" target="_blank" className="group">
           <svg
@@ -62,7 +60,7 @@ export default function Home() {
             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
           </svg>
         </Link>
-        <Link href="https://x.com/Jqstln" title="Twitter" target="_blank" className="group">
+        <Link href="https://x.com/Jqstln" title="X" target="_blank" className="group">
           <svg
             width="48"
             height="64"
@@ -76,14 +74,19 @@ export default function Home() {
           </svg>
         </Link>
       </div>
-      <div className="mt-6 flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-6 space-y-4 sm:space-y-0">
+      <div className="mt-6 flex flex-col justify-center space-y-4 space-x-0 sm:flex-row sm:space-y-0 sm:space-x-6">
+        <Link href="blog">
+          <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+            My Blog
+          </button>
+        </Link>
         <Link href="projects">
-          <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+          <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
             My Projects
           </button>
         </Link>
         <Link href="contact">
-          <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+          <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
             Contact Me
           </button>
         </Link>
@@ -91,3 +94,4 @@ export default function Home() {
     </div>
   );
 }
+
