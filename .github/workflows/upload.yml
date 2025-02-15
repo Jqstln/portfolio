@@ -42,7 +42,7 @@ jobs:
           BUILD_DIR='./out'
           lftp -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER <<EOF
           cd /domains/justinnn.dev/public_html/new/
-          rm -r *
+          rm -r ./
           mirror -R $BUILD_DIR/ ./
           quit
           EOF
