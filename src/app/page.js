@@ -6,9 +6,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <>
-      <h1 className="text-center text-6xl font-bold">Hey! I'm Justin.</h1>
-      <p className="mx-auto mt-4 max-w-3xl text-center text-2xl">
+    <div className="flex flex-col items-center text-center">
+      <h1 className="text-6xl font-bold">Hey! I'm Justin.</h1>
+      <p className="mx-auto mt-4 max-w-3xl text-2xl">
         I'm a <span className="text-pink-300">frontend developer</span> based in{' '}
         <Link
           href="https://youtu.be/eE_IUPInEuc"
@@ -43,6 +43,8 @@ export default function Home() {
         </Link>
         .
       </p>
+
+      {/* Social Links */}
       <div className="mt-6 flex justify-center space-x-6">
         <Link href="https://github.com/Jqstln" title="GitHub" target="_blank" className="group">
           <svg
@@ -74,7 +76,7 @@ export default function Home() {
           </svg>
         </Link>
       </div>
-      <div className="mt-6 flex justify-center space-x-6">
+      <div className="mt-6 flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-6 space-y-4 sm:space-y-0">
         <Link href="projects">
           <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
             My Projects
@@ -86,6 +88,6 @@ export default function Home() {
           </button>
         </Link>
       </div>
-    </>
+    </div>
   );
 }

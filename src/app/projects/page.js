@@ -20,7 +20,7 @@ export default function Projects() {
                 height={512}
                 alt="OaseMC"
                 crossOrigin="anonymous"
-                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
+                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
             <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -44,7 +44,7 @@ export default function Projects() {
                 width={512}
                 height={512}
                 alt="AloraMC"
-                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
+                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
             <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -68,7 +68,7 @@ export default function Projects() {
                 width={512}
                 height={512}
                 alt="ARC8"
-                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
+                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
             <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -92,7 +92,7 @@ export default function Projects() {
                 width={512}
                 height={512}
                 alt="Spectrumspark"
-                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-sm"
+                className="transform transition-transform duration-300 group-hover:scale-110 group-hover:blur-xs"
               />
             </div>
             <div className="absolute inset-0 flex w-full flex-col items-center justify-center space-y-4 bg-black bg-opacity-60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">

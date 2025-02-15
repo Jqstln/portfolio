@@ -63,7 +63,7 @@ export default function Projects() {
                 name="name"
                 required
                 placeholder="Your name"
-                className="w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:outline-none"
+                className="w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:outline-hidden"
               />
             </div>
             <div className="mb-4">
@@ -75,7 +75,7 @@ export default function Projects() {
                 name="email"
                 required
                 placeholder="email@example.com"
-                className="w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:outline-none"
+                className="w-full rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:outline-hidden"
               />
             </div>
             <div className="mb-6">
@@ -87,7 +87,7 @@ export default function Projects() {
                 required
                 rows="7"
                 placeholder="Enter Message"
-                className="w-full resize-none rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:outline-none"
+                className="w-full resize-none rounded-md border border-gray-700 bg-gray-800 px-3 py-2 text-gray-300 placeholder-gray-500 focus:border-blue-500 focus:outline-hidden"
               ></textarea>
             </div>
             <ReCAPTCHA
@@ -97,7 +97,7 @@ export default function Projects() {
             />
             <button
               type="submit"
-              className="focus:shadow-outline w-full rounded bg-sky-400 px-4 py-2 font-bold text-white transition duration-300 hover:bg-sky-500 focus:outline-none"
+              className="focus:shadow-outline w-full rounded-sm bg-sky-400 px-4 py-2 font-bold text-white transition duration-300 hover:bg-sky-500 focus:outline-hidden"
             >
               Submit
             </button>
