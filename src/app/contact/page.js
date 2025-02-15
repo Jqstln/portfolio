@@ -47,12 +47,12 @@ export default function Projects() {
           try to respond within one business week.
         </p>
         {notification && (
-          <div className="mx-auto mb-3 mt-3 flex w-96 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 p-3 text-gray-400 opacity-100 transition-opacity duration-500">
+          <div className="mx-auto mt-3 mb-3 flex w-96 items-center justify-center rounded-lg border border-gray-700 bg-gray-800 p-3 text-gray-400 opacity-100 transition-opacity duration-500">
             <MailCheck className="mr-6 h-12 w-12" />
             <span>{notification}</span>
           </div>
         )}
-        <div className="mx-auto mb-8 mt-8 w-96 rounded-lg border border-gray-700 p-6">
+        <div className="mx-auto mt-8 mb-8 w-96 rounded-lg border border-gray-700 p-6">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label htmlFor="name" className="mb-2 block text-left font-bold text-gray-400">
@@ -105,7 +105,7 @@ export default function Projects() {
         </div>
         <div className="mt-6">
           <Link href="/">
-            <button className="rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
+            <button className="cursor-pointer rounded-lg bg-sky-400 px-6 py-3 font-bold text-white transition duration-300 hover:bg-sky-500">
               Go Back
             </button>
           </Link>
