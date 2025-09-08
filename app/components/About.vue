@@ -21,7 +21,7 @@
 
 <script setup>
 const recentSkills = [
-    'TypeScript', 'Nuxt 3', 'Node.js',
+    'TypeScript', 'Nuxt 4', 'Node.js',
     'PostgreSQL', 'Tailwind CSS', 'Figma'
 ];
 </script>
