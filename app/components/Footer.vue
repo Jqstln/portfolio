@@ -3,7 +3,7 @@
         <div class="flex justify-center space-x-6 mb-4">
             <NuxtLink v-for="social in socialLinks" :key="social.name" :to="social.url" target="_blank" rel="noopener" class="hover:text-cyan-400 transition-colors" v-html="social.icon" />
         </div>
-        <p class="font-mono text-sm">Designed & Built by Your Name</p>
+        <p class="font-mono text-sm">Designed & Built by Justinnn | with love ❤️</p>
     </footer>
 </template>
 
