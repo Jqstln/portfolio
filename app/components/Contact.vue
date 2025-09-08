@@ -12,11 +12,11 @@
 
         <form @submit.prevent="submitForm"
             class="max-w-xl mx-auto flex flex-col gap-6 text-left backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl border border-gray-700">
-            <input type="text" name="name" v-model="form.name" placeholder="Your Name" required
+            <input type="text" name="name" v-model="form.name" placeholder="Name" required
                 class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none transition-all duration-300 placeholder-gray-400" />
-            <input type="email" name="email" v-model="form.email" placeholder="Your Email" required
+            <input type="email" name="email" v-model="form.email" placeholder="Email" required
                 class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none transition-all duration-300 placeholder-gray-400" />
-            <textarea name="message" v-model="form.message" placeholder="Your Message" required
+            <textarea name="message" v-model="form.message" placeholder="Message" required
                 class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none resize-none h-36 transition-all duration-300 placeholder-gray-400"></textarea>
             <div class="flex justify-center">
                 <VueHcaptcha ref="hcaptchaRef" sitekey="dc3c0a68-659a-4454-ba90-2c18fed03094" theme="dark"
