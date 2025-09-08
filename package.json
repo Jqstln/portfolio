@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "start": "nuxt start",
     "lint": "biome lint",
     "lint:fix": "biome lint --write",
