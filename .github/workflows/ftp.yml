@@ -24,10 +24,13 @@ jobs:
           version: 10
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Build Nuxt (static)
-        run: pnpm build
+      - name: Rebuild native modules
+        run: pnpm rebuild
+
+      - name: Generate static Nuxt site
+        run: pnpm exec nuxt generate
 
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
