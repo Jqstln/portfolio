@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master-v2
+  pull_request:
 
 jobs:
   build-and-deploy:
@@ -12,32 +13,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: 18
-
+          node-version: '20'
+          cache: 'pnpm'
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.1.0
         with:
           version: 10
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline
-
-      - name: Rebuild native modules
-        run: pnpm rebuild
-
-      - name: Generate static Nuxt site
+      - name: Clean and install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f pnpm-lock.yaml
+          pnpm install
+      - name: Generate Nuxt site
         run: pnpm exec nuxt generate
-
-      - name: Deploy to FTP Server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy via FTP
+        if: github.ref == 'refs/heads/main'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
-          local-dir: ./.output/public
-          server-dir: /domains/justinnn.dev/public_html/new/
+          local-dir: .output/public
