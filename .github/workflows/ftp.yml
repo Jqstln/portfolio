@@ -3,7 +3,7 @@ name: Deploy via FTP
 on:
   push:
     branches:
-      - main
+      - master-v2
 
 jobs:
   build-and-deploy:
