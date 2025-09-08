@@ -20,10 +20,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Clean install dependencies
+      - name: Install dependencies
         run: |
-          rm -rf node_modules
-          npm install
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
+
+      - name: Patch unifont googleicons JSON parse (temporary workaround)
+        run: |
+          FILE=node_modules/unifont/dist/index.js
+          if [ -f "$FILE" ]; then
+            grep -q "XSSI_PATCH" "$FILE" || sed -i "s/JSON.parse(await r.text())/JSON.parse((await r.text()).replace(/^\\)\\]\\}'\\\\n?/, '')) \/* XSSI_PATCH *\//" "$FILE" || true
+          fi
 
       - name: Generate Nuxt site
         run: npx nuxt generate
@@ -35,7 +41,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: .output/public
+          local-dir: .output/public/
           exclude: |
             **/.git*
             **/.git*/**
