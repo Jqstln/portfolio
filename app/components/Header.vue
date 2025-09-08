@@ -1,5 +1,8 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+    :class="isScrolled ? 'bg-[#0D1117]/90 backdrop-blur-md border-b border-gray-800 shadow-lg shadow-black/20' : 'bg-transparent'"
+  >
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-6xl">
       <NuxtLink to="#home" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors duration-300">
         Justinnn<span class="text-cyan-400">.</span>
@@ -43,9 +46,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const isMenuOpen = ref(false);
+const isScrolled = ref(false);
 
 const links = [
   { href: '#about', label: '/about' },
@@ -53,6 +57,19 @@ const links = [
   { href: '#projects', label: '/projects' },
   { href: '#contact', label: '/contact' }
 ];
+
+function handleScroll() {
+  isScrolled.value = window.scrollY > 10;
+}
+
+onMounted(() => {
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style>
