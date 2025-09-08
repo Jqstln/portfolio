@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master-v2
+      - main
   pull_request:
 
 jobs:
@@ -13,17 +14,22 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: '20'
-          cache: 'pnpm'
-      - name: Enable Corepack (pnpm)
-        run: corepack enable
-      - name: Install dependencies
-        run: pnpm install
+          cache: 'npm'
+
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
+
       - name: Generate Nuxt site
-        run: pnpm exec nuxt generate
+        run: npx nuxt generate
+
       - name: Deploy via FTP
         if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master-v2' }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -32,3 +38,9 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: .output/public
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/package-lock.json
+            **/.github/**
