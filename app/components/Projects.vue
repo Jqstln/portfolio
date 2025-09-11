@@ -42,7 +42,7 @@ const projects = [
 			"A fun Discord game bot with guessing, counting, and other mini-games.",
 		tech: ["Node.js", "Discord.js", "MariaDB", "Stripe"],
 		github: "https://github.com/ARC8-Official",
-		live: "#",
+		live: "https://arc8.fun/",
 	},
 	{
 		title: "OaseMC",
