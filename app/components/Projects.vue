@@ -28,40 +28,45 @@
 
 <script setup>
 const projects = [
-    {
-        title: 'ChargeBuddies',
-        description: 'Rent portable chargers on the go—never run out of power again.',
-        tech: ['Next.js', 'Stripe', 'PostgreSQL', 'React', 'Tailwind CSS'],
-        github: 'https://github.com/ChargeBuddies/',
-        live: 'https://chargebuddies.nl/'
-    },
-    {
-        title: 'ARC8',
-        description: 'A fun Discord game bot with guessing, counting, and other mini-games.',
-        tech: ['Node.js', 'Discord.js', 'MariaDB', 'Stripe'],
-        github: 'https://github.com/ARC8-Official',
-        live: '#'
-    },
-    {
-        title: 'OaseMC',
-        description: 'The friendliest Minecraft server in NL & BE—join and play with our community!',
-        tech: ['Java', 'Spigot', 'MySQL', 'BungeeCord'],
-        github: 'https://github.com/OaseMC',
-        live: 'https://oasemc.nl/'
-    },
-    {
-        title: 'Portfolio',
-        description: 'My personal portfolio built to be fast, responsive, and showcase my work.',
-        tech: ['Nuxt 3', 'Tailwind CSS', 'Figma'],
-        github: 'https://github.com/Jqstln/portfolio',
-        live: 'https://justinnn.dev/'
-    },
-    {
-        title: 'SpectrumSpark',
-        description: 'A platform supporting neurodiverse minds with resources, tools, and community.',
-        tech: ['Vue.js', 'Node.js', 'Tailwind CSS', 'Figma'],
-        github: 'https://github.com/SpectrumSpark',
-        live: 'https://spectrumspark.org/'
-    }
+	{
+		title: "ChargeBuddies",
+		description:
+			"Rent portable chargers on the go—never run out of power again.",
+		tech: ["Next.js", "Stripe", "PostgreSQL", "React", "Tailwind CSS"],
+		github: "https://github.com/ChargeBuddies/",
+		live: "https://chargebuddies.nl/",
+	},
+	{
+		title: "ARC8",
+		description:
+			"A fun Discord game bot with guessing, counting, and other mini-games.",
+		tech: ["Node.js", "Discord.js", "MariaDB", "Stripe"],
+		github: "https://github.com/ARC8-Official",
+		live: "#",
+	},
+	{
+		title: "OaseMC",
+		description:
+			"The friendliest Minecraft server in NL & BE—join and play with our community!",
+		tech: ["Java", "Spigot", "MySQL", "BungeeCord"],
+		github: "https://github.com/OaseMC",
+		live: "https://oasemc.nl/",
+	},
+	{
+		title: "Portfolio",
+		description:
+			"My personal portfolio built to be fast, responsive, and showcase my work.",
+		tech: ["Nuxt 3", "Tailwind CSS", "Figma"],
+		github: "https://github.com/Jqstln/portfolio",
+		live: "https://justinnn.dev/",
+	},
+	{
+		title: "SpectrumSpark",
+		description:
+			"A platform supporting neurodiverse minds with resources, tools, and community.",
+		tech: ["Vue.js", "Node.js", "Tailwind CSS", "Figma"],
+		github: "https://github.com/SpectrumSpark",
+		live: "https://spectrumspark.org/",
+	},
 ];
 </script>

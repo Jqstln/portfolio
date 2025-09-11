@@ -1,44 +1,44 @@
 <script setup lang="ts">
-import type { NuxtError } from '#app'
-import { clearError } from '#app'
+import type { NuxtError } from "#app";
+import { clearError } from "#app";
 
 const props = defineProps<{
-  error: NuxtError
-}>()
+	error: NuxtError;
+}>();
 
 const codeMeta: Record<number, { title: string; message: string }> = {
-  401: {
-    title: 'Unauthorized',
-    message: 'You need to be signed in to view this resource.'
-  },
-  403: {
-    title: 'Forbidden',
-    message: 'You do not have permission to access this page.'
-  },
-  404: {
-    title: 'Page Not Found',
-    message: 'Sorry, the page you were looking for doesn’t exist.'
-  },
-  500: {
-    title: 'Server Error',
-    message: 'The server encountered an unexpected condition.'
-  }
-}
+	401: {
+		title: "Unauthorized",
+		message: "You need to be signed in to view this resource.",
+	},
+	403: {
+		title: "Forbidden",
+		message: "You do not have permission to access this page.",
+	},
+	404: {
+		title: "Page Not Found",
+		message: "Sorry, the page you were looking for doesn’t exist.",
+	},
+	500: {
+		title: "Server Error",
+		message: "The server encountered an unexpected condition.",
+	},
+};
 
-const statusCode = props.error.statusCode ?? 500
+const statusCode = props.error.statusCode ?? 500;
 const meta = codeMeta[statusCode] ?? {
-  title: 'Something went wrong',
-  message: props.error.statusMessage || props.error.message || 'Unexpected error'
-}
+	title: "Something went wrong",
+	message:
+		props.error.statusMessage || props.error.message || "Unexpected error",
+};
 
-const title = meta.title
-const message = meta.message
-const is404 = statusCode === 404
+const title = meta.title;
+const message = meta.message;
+const is404 = statusCode === 404;
 
 function goHome() {
-  clearError({ redirect: '/' })
+	clearError({ redirect: "/" });
 }
-
 </script>
 
 <template>

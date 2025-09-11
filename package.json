@@ -7,9 +7,9 @@
     "build": "nuxt generate",
     "start": "nuxt start",
     "lint": "biome lint",
-    "lint:fix": "biome lint --write",
-    "format": "biome format --write",
-    "check": "biome check --write"
+    "lint:fix": "biome lint --write app/",
+    "format": "biome format --write app/",
+    "check": "biome check --write app/"
   },
   "dependencies": {
     "@hcaptcha/vue3-hcaptcha": "^1.3.0",

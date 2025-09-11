@@ -13,19 +13,19 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted } from "vue";
 
 onMounted(() => {
-  document.documentElement.style.scrollBehavior = 'smooth';
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const id = this.getAttribute('href');
-      if (id && id.startsWith('#')) {
-        e.preventDefault();
-        const el = document.querySelector(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
+	document.documentElement.style.scrollBehavior = "smooth";
+	document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+		anchor.addEventListener("click", function (e) {
+			const id = this.getAttribute("href");
+			if (id && id.startsWith("#")) {
+				e.preventDefault();
+				const el = document.querySelector(id);
+				if (el) el.scrollIntoView({ behavior: "smooth" });
+			}
+		});
+	});
 });
 </script>

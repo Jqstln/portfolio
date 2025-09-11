@@ -49,14 +49,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 const developer = ref({
-    name: 'Justin',
-    title: 'Web Developer + Designer',
-    skills: ['Nuxt.js', 'Vue', 'Node.js', 'TypeScript', 'TailwindCSS'],
-    contact: {
-        email: 'hello@justinnn.dev',
-        github: '/Jqstln'
-    }
+	name: "Justin",
+	title: "Web Developer + Designer",
+	skills: ["Nuxt.js", "Vue", "Node.js", "TypeScript", "TailwindCSS"],
+	contact: {
+		email: "hello@justinnn.dev",
+		github: "/Jqstln",
+	},
 });
 </script>

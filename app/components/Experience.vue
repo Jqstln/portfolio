@@ -26,38 +26,38 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed } from "vue";
 const experience = ref([
-  {
-    duration: '2023 - Present',
-    role: 'Co-Founder & Developer',
-    company: 'SpectrumSpark',
-    description: [
-      'Building a platform to support neurodiverse communities with tools and resources.',
-      'Responsible for front-end development and collaborative project planning.',
-      'Working closely with team members to improve accessibility and engagement.'
-    ]
-  },
-  {
-    duration: '2021 - Present',
-    role: 'Co-Founder & Developer',
-    company: 'M1dnght Development',
-    description: [
-      'Developed community-driven projects, Discord bots, and web applications.',
-      'Managed small team collaborations and contributed to open-source tools.',
-      'Focused on smart, automated solutions for community engagement.'
-    ]
-  },
-  {
-    duration: '2020 - 2024',
-    role: 'Developer',
-    company: 'Devolvex, LLC',
-    description: [
-      'Built Minecraft plugins, Discord bots, APIs, and websites for clients and communities.',
-      'Maintained and archived multiple public repositories.',
-      'Collaborated with other developers on creative software projects.'
-    ]
-  }
+	{
+		duration: "2023 - Present",
+		role: "Co-Founder & Developer",
+		company: "SpectrumSpark",
+		description: [
+			"Building a platform to support neurodiverse communities with tools and resources.",
+			"Responsible for front-end development and collaborative project planning.",
+			"Working closely with team members to improve accessibility and engagement.",
+		],
+	},
+	{
+		duration: "2021 - Present",
+		role: "Co-Founder & Developer",
+		company: "M1dnght Development",
+		description: [
+			"Developed community-driven projects, Discord bots, and web applications.",
+			"Managed small team collaborations and contributed to open-source tools.",
+			"Focused on smart, automated solutions for community engagement.",
+		],
+	},
+	{
+		duration: "2020 - 2024",
+		role: "Developer",
+		company: "Devolvex, LLC",
+		description: [
+			"Built Minecraft plugins, Discord bots, APIs, and websites for clients and communities.",
+			"Maintained and archived multiple public repositories.",
+			"Collaborated with other developers on creative software projects.",
+		],
+	},
 ]);
 
 const activeExperienceIndex = ref(0);

@@ -38,70 +38,72 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import VueHcaptcha from '@hcaptcha/vue3-hcaptcha'
+import { ref } from "vue";
+import VueHcaptcha from "@hcaptcha/vue3-hcaptcha";
 
 const form = ref({
-    access_key: '94952b2d-dc7c-476b-a1c2-84c934b7b9c7',
-    subject: 'New message from portfolio',
-    name: '',
-    email: '',
-    message: '',
-    'h-captcha-response': '',
-})
+	access_key: "94952b2d-dc7c-476b-a1c2-84c934b7b9c7",
+	subject: "New message from portfolio",
+	name: "",
+	email: "",
+	message: "",
+	"h-captcha-response": "",
+});
 
-const status = ref('')
-const result = ref('')
-const hcaptchaRef = ref(null)
+const status = ref("");
+const result = ref("");
+const hcaptchaRef = ref(null);
 
 const onVerify = (token) => {
-    form.value['h-captcha-response'] = token
-}
+	form.value["h-captcha-response"] = token;
+};
 
 const submitForm = async () => {
-    if (!form.value.name || !form.value.email || !form.value.message) {
-        result.value = 'Please fill in all fields.'
-        status.value = 'error'
-        return
-    }
-    if (!form.value['h-captcha-response']) {
-        result.value = 'Please complete the hCaptcha.'
-        status.value = 'error'
-        return
-    }
+	if (!form.value.name || !form.value.email || !form.value.message) {
+		result.value = "Please fill in all fields.";
+		status.value = "error";
+		return;
+	}
+	if (!form.value["h-captcha-response"]) {
+		result.value = "Please complete the hCaptcha.";
+		status.value = "error";
+		return;
+	}
 
-    try {
-        status.value = 'loading'
-        const formData = new FormData()
-        Object.entries(form.value).forEach(([key, val]) => formData.append(key, val))
+	try {
+		status.value = "loading";
+		const formData = new FormData();
+		Object.entries(form.value).forEach(([key, val]) =>
+			formData.append(key, val),
+		);
 
-        const response = await $fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData,
-        })
+		const response = await $fetch("https://api.web3forms.com/submit", {
+			method: "POST",
+			body: formData,
+		});
 
-        if (response.success) {
-            status.value = 'success'
-            result.value = 'Message sent successfully!'
-        } else {
-            status.value = 'error'
-            result.value = response.message || 'Something went wrong!'
-        }
-    } catch (error) {
-        console.error(error)
-        status.value = 'error'
-        result.value = 'Something went wrong!'
-    } finally {
-        form.value.name = ''
-        form.value.email = ''
-        form.value.message = ''
-        form.value['h-captcha-response'] = ''
-        hcaptchaRef.value?.reset?.()
+		if (response.success) {
+			status.value = "success";
+			result.value = "Message sent successfully!";
+		} else {
+			status.value = "error";
+			result.value = response.message || "Something went wrong!";
+		}
+	} catch (error) {
+		console.error(error);
+		status.value = "error";
+		result.value = "Something went wrong!";
+	} finally {
+		form.value.name = "";
+		form.value.email = "";
+		form.value.message = "";
+		form.value["h-captcha-response"] = "";
+		hcaptchaRef.value?.reset?.();
 
-        setTimeout(() => {
-            status.value = ''
-            result.value = ''
-        }, 5000)
-    }
-}
+		setTimeout(() => {
+			status.value = "";
+			result.value = "";
+		}, 5000);
+	}
+};
 </script>
