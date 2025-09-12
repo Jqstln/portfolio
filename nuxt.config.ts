@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
-import { defineOrganization } from 'nuxt-schema-org/schema';
+import { defineOrganization } from "nuxt-schema-org/schema";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -16,12 +16,12 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: { plugins: [tailwindcss()] },
   modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/seo"],
-    seo: {
+  seo: {
     defaults: {
       title: "Justinnn - Web Dev & Designer",
-      description: "Web developer from The Netherlands creating intuitive, high-performance applications. Gamer, animal lover, and passionate about building digital experiences..",
-      keywords:
-        "web development, app development, game development, Justinnn",
+      description:
+        "Web developer from The Netherlands creating intuitive, high-performance applications. Gamer, animal lover, and passionate about building digital experiences..",
+      keywords: "web development, app development, game development, Justinnn",
       siteUrl: "https://justinnn.dev",
       siteName: "Justinnn",
       applicationName: "Justinnn",
@@ -39,7 +39,8 @@ export default defineNuxtConfig({
   site: {
     url: "https://justinnn.dev",
     name: "Justinnn",
-    description: "Web developer from The Netherlands creating intuitive, high-performance applications. Gamer, animal lover, and passionate about building digital experiences.",
+    description:
+      "Web developer from The Netherlands creating intuitive, high-performance applications. Gamer, animal lover, and passionate about building digital experiences.",
     defaultLocale: "en",
     trailingSlash: false,
     indexable: true,
@@ -49,8 +50,9 @@ export default defineNuxtConfig({
       name: "Justinnn",
       url: "https://justinnn.dev",
       logo: "https://justinnn.dev/img/logo.png",
-      description: "Web developer from The Netherlands creating intuitive, high-performance applications. Gamer, animal lover, and passionate about building digital experiences.",
-    })
+      description:
+        "Web developer from The Netherlands creating intuitive, high-performance applications. Gamer, animal lover, and passionate about building digital experiences.",
+    }),
   },
   sitemap: {
     autoLastmod: true,
@@ -73,9 +75,10 @@ export default defineNuxtConfig({
     head: {
       link: [
         {
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/img/apple-touch-icon.png",
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/img/favicon-16x16.png",
         },
         {
           rel: "icon",
@@ -86,10 +89,21 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/png",
-          sizes: "16x16",
-          href: "/img/favicon-16x16.png",
+          sizes: "96x96",
+          href: "/img/favicon-96x96.png",
+        },
+        { rel: "icon", type: "image/svg+xml", href: "/img/favicon.svg" },
+        { rel: "shortcut icon", href: "/img/favicon.ico" },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/img/apple-touch-icon.png",
         },
         { rel: "manifest", href: "/img/site.webmanifest" },
+      ],
+      meta: [
+        { name: "apple-mobile-web-app-title", content: "Justinnn" },
+        { name: "theme-color", content: "#0D1117" },
       ],
     },
   },
