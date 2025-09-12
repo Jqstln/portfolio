@@ -13,7 +13,7 @@
             </div>
             <div class="relative w-full max-w-xs mx-auto md:mx-0 h-80">
                 <div class="absolute inset-0 bg-gray-800 rounded-lg transform -rotate-5 transition-transform duration-500 hover:rotate-3"></div>
-                <img src="/profile.png" alt="Justin" class="relative w-full h-full object-cover rounded-lg shadow-lg -rotate-0" />
+                <img src="/img/profile.png" alt="Justin" class="relative w-full h-full object-cover rounded-lg shadow-lg -rotate-0" />
             </div>
         </div>
     </section>
