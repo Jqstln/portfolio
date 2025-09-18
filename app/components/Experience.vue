@@ -39,7 +39,7 @@ const experience = ref([
 		],
 	},
 	{
-		duration: "2021 - Present",
+		duration: "2024 - Present",
 		role: "Co-Founder & Developer",
 		company: "M1dnght Development",
 		description: [
