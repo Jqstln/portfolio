@@ -58,23 +58,23 @@ const isMenuOpen = ref(false);
 const isScrolled = ref(false);
 
 const links = [
-	{ href: "#about", label: "/about" },
-	{ href: "#experience", label: "/experience" },
-	{ href: "#projects", label: "/projects" },
-	{ href: "#contact", label: "/contact" },
+    { href: "/#about", label: "/about" },
+    { href: "/#experience", label: "/experience" },
+    { href: "/#projects", label: "/projects" },
+    { href: "/#contact", label: "/contact" },
 ];
 
 function handleScroll() {
-	isScrolled.value = window.scrollY > 10;
+    isScrolled.value = window.scrollY > 10;
 }
 
 onMounted(() => {
-	handleScroll();
-	window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
 });
 
 onBeforeUnmount(() => {
-	window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
