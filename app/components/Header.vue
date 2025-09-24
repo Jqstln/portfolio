@@ -4,28 +4,30 @@
     :class="isScrolled ? 'bg-[#0D1117]/90 backdrop-blur-md border-b border-gray-800 shadow-lg shadow-black/20' : 'bg-transparent'"
   >
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-6xl">
-      <NuxtLink to="#home" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors duration-300">
+      <a href="#home" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors duration-300">
         Justinnn<span class="text-cyan-400">.</span>
-      </NuxtLink>
-
+      </a>
       <div class="hidden md:flex items-center space-x-8">
-        <NuxtLink v-for="link in links" :key="link.href" :to="link.href"
-           class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 font-mono">
+        <a 
+          v-for="link in links" 
+          :key="link.href" 
+          :href="link.href"
+          class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 font-mono"
+        >
           {{ link.label }}
-        </NuxtLink>
+        </a>
       </div>
-
       <button 
         v-if="!isMenuOpen"
         @click="isMenuOpen = true" 
-        class="md:hidden text-gray-300 focus:outline-none z-50">
+        class="md:hidden text-gray-300 focus:outline-none z-50"
+      >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
     </nav>
-
     <transition name="slide-fade">
       <div v-if="isMenuOpen"
            class="fixed inset-0 bg-[#0D1117] flex flex-col justify-center items-center space-y-8 text-2xl text-gray-300 font-mono z-40">
@@ -35,11 +37,15 @@
                   d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-
-        <NuxtLink v-for="link in links" :key="link.href" :to="link.href" @click.native="isMenuOpen = false"
-           class="hover:text-cyan-400 transition-colors duration-300">
+        <a 
+          v-for="link in links" 
+          :key="link.href" 
+          :href="link.href" 
+          @click="isMenuOpen = false"
+          class="hover:text-cyan-400 transition-colors duration-300"
+        >
           {{ link.label }}
-        </NuxtLink>
+        </a>
       </div>
     </transition>
   </header>

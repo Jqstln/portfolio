@@ -12,14 +12,14 @@
                     </p>
                     <div
                         class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <NuxtLink to="#projects"
+                        <a href="#projects"
                             class="bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-cyan-600 transition-all duration-300 w-full sm:w-auto text-center">
                             View My Work
-                        </NuxtLink>
-                        <NuxtLink to="#contact"
+                </a>
+                        <a href="#contact"
                             class="border border-gray-600 text-gray-300 font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 hover:border-gray-700 transition-all duration-300 w-full sm:w-auto text-center">
                             Get in Touch
-                        </NuxtLink>
+                        </a>
                     </div>
                 </div>
                 <div
