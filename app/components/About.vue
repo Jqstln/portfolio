@@ -6,14 +6,14 @@
                 <p>I'm a developer and avid gamer based in The Netherlands. Beyond coding, I have a love for animals and enjoy socializing at parties. I thrive on combining creativity and technical skills, whether I'm building an application or diving into my favorite games.</p>
                 <ul class="grid grid-cols-2 gap-2 text-gray-300">
                     <li v-for="skill in recentSkills" :key="skill" class="flex items-center space-x-2">
-                        <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                        <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
                         <span>{{ skill }}</span>
                     </li>
                 </ul>
             </div>
             <div class="relative w-full max-w-xs mx-auto md:mx-0 h-80">
                 <div class="absolute inset-0 bg-gray-800 rounded-lg transform -rotate-5 transition-transform duration-500 hover:rotate-3"></div>
-                <img src="/img/profile.png" alt="Justin" class="relative w-full h-full object-cover rounded-lg shadow-lg -rotate-0" />
+                <img src="/img/profile.png" alt="Justin" class="relative w-full h-full object-cover rounded-lg shadow-lg rotate-0" />
             </div>
         </div>
     </section>
