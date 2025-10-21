@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-white mt-auto">{{ project.title }}</h3>
-                    <p class="text-gray-400 my-2 flex-grow">{{ project.description }}</p>
+                    <p class="text-gray-400 my-2 grow">{{ project.description }}</p>
                     <div class="flex flex-wrap gap-2 text-xs font-mono mt-4">
                         <span v-for="tech in project.tech" :key="tech" class="bg-gray-800 px-2 py-1 rounded">{{ tech }}</span>
                     </div>

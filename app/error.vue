@@ -45,7 +45,7 @@ function goHome() {
   <div class="bg-[#0D1117] text-gray-300 font-sans antialiased min-h-screen flex flex-col">
     <Header />
 
-    <main class="container mx-auto px-6 max-w-6xl flex-grow flex items-center py-24">
+    <main class="container mx-auto px-6 max-w-6xl grow flex items-center py-24">
       <div class="w-full">
         <div class="max-w-2xl mx-auto text-center space-y-6">
           <div>
