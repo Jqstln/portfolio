@@ -56,7 +56,7 @@ const projects = [
 		title: "Portfolio",
 		description:
 			"My personal portfolio built to be fast, responsive, and showcase my work.",
-		tech: ["Nuxt 3", "Tailwind CSS", "Figma"],
+		tech: ["Nuxt 4", "Tailwind CSS", "Figma"],
 		github: "https://github.com/Jqstln/portfolio",
 		live: "https://justinnn.dev/",
 	},
