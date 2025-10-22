@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   vite: { plugins: [tailwindcss()] },
-  modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/seo"],
+  modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/seo", "@nuxt/eslint"],
   seo: {
     defaults: {
       title: "Justinnn - Web Dev & Designer",
