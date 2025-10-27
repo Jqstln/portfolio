@@ -1,11 +1,15 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<footer class="text-center py-8 text-gray-500">
 		<div class="flex justify-center space-x-6 mb-4">
-			<NuxtLink to="https://github.com/Jqstln" target="_blank" rel="noopener"
+			<NuxtLink
+to="https://github.com/Jqstln" target="_blank" rel="noopener"
 				class="hover:text-cyan-400 transition-colors">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+				<svg
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
 					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-					<path d="M9 19c-5 1.5-5-2.5-7-3m14
+					<path
+d="M9 19c-5 1.5-5-2.5-7-3m14
           6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35
           6.44-1.54 6.44-7A5.44 5.44 0 0 0 20
           4.77 5.07 5.07 0 0 0 19.91 1S18.73.65
@@ -17,11 +21,14 @@
           18.13V22" />
 				</svg>
 			</NuxtLink>
-			<NuxtLink to="https://www.linkedin.com/in/justinharing/" target="_blank" rel="noopener"
+			<NuxtLink
+to="https://www.linkedin.com/in/justinharing/" target="_blank" rel="noopener"
 				class="hover:text-cyan-400 transition-colors">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+				<svg
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
 					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-					<path d="M16 8a6 6 0 0 1 6
+					<path
+d="M16 8a6 6 0 0 1 6
           6v7h-4v-7a2 2 0 0 0-2-2
           2 2 0 0 0-2 2v7h-4v-7a6 6 0 0
           1 6-6z" />
@@ -29,9 +36,11 @@
 					<circle cx="4" cy="4" r="2" />
 				</svg>
 			</NuxtLink>
-			<NuxtLink to="https://x.com/Jqstln" target="_blank" rel="noopener"
+			<NuxtLink
+to="https://x.com/Jqstln" target="_blank" rel="noopener"
 				class="hover:text-cyan-400 transition-colors">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+				<svg
+xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
 					stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
 					class="feather feather-x">
 					<path

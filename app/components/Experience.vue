@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <section id="experience" class="py-24">
     <h2 class="text-3xl font-bold text-white mb-12 flex items-center"><span class="text-cyan-400 font-mono text-2xl mr-3">02.</span> Work Experience <span class="block h-px bg-gray-700 w-full max-w-xs ml-6" /></h2>
@@ -5,11 +6,11 @@
       <div class="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b-2 md:border-b-0 md:border-l-2 border-gray-800">
         <button
           v-for="(job, index) in experience" :key="job.company"
-          @click="activeExperienceIndex = index"
           :class="[
             'px-4 py-3 text-left w-full md:w-auto font-mono whitespace-nowrap text-gray-400 transition-colors duration-300 border-b-2 md:border-b-0 md:border-l-2 border-transparent',
             activeExperienceIndex === index ? 'text-cyan-400 bg-gray-800/50 border-cyan-400' : 'hover:bg-gray-800/30 hover:text-white'
           ]"
+          @click="activeExperienceIndex = index"
         >
           {{ job.company }}
         </button>

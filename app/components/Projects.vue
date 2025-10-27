@@ -1,6 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section id="projects" class="py-24">
-        <h2 class="text-3xl font-bold text-white mb-12 flex items-center"><span class="text-cyan-400 font-mono text-2xl mr-3">03.</span> My Projects <span class="block h-px bg-gray-700 w-full max-w-xs ml-6"></span></h2>
+        <h2 class="text-3xl font-bold text-white mb-12 flex items-center"><span class="text-cyan-400 font-mono text-2xl mr-3">03.</span> My Projects <span class="block h-px bg-gray-700 w-full max-w-xs ml-6"/></h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div v-for="project in projects" :key="project.title" class="bg-[#161B22] border border-gray-800 rounded-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <div class="p-6 flex flex-col h-full">

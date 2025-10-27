@@ -1,8 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section id="contact" class="py-24 text-center">
         <h2 class="text-3xl font-bold text-white mb-12 flex items-center justify-center">
             <span class="text-cyan-400 font-mono text-2xl mr-3">04.</span> Get In Touch
-            <span class="hidden sm:block h-px bg-gray-700 w-full max-w-xs ml-6"></span>
+            <span class="hidden sm:block h-px bg-gray-700 w-full max-w-xs ml-6"/>
         </h2>
 
         <p class="max-w-xl mx-auto text-gray-400 mb-12">
@@ -10,24 +11,31 @@
             always open. I'll get back to you!
         </p>
 
-        <form @submit.prevent="submitForm"
-            class="max-w-xl mx-auto flex flex-col gap-6 text-left backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl border border-gray-700">
-            <input type="text" name="name" v-model="form.name" placeholder="Name" required
-                class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none transition-all duration-300 placeholder-gray-400" />
-            <input type="email" name="email" v-model="form.email" placeholder="Email" required
-                class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none transition-all duration-300 placeholder-gray-400" />
-            <textarea name="message" v-model="form.message" placeholder="Message" required
-                class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none resize-none h-36 transition-all duration-300 placeholder-gray-400"></textarea>
+        <form
+class="max-w-xl mx-auto flex flex-col gap-6 text-left backdrop-blur-sm bg-gray-900/30 p-8 rounded-2xl shadow-xl border border-gray-700"
+            @submit.prevent="submitForm">
+            <input
+v-model="form.name" type="text" name="name" placeholder="Name" required
+                class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none transition-all duration-300 placeholder-gray-400" >
+            <input
+v-model="form.email" type="email" name="email" placeholder="Email" required
+                class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none transition-all duration-300 placeholder-gray-400" >
+            <textarea
+v-model="form.message" name="message" placeholder="Message" required
+                class="p-4 rounded-xl bg-gray-800/50 text-white border border-cyan-500/40 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-500 outline-none resize-none h-36 transition-all duration-300 placeholder-gray-400"/>
             <div class="flex justify-center">
-                <VueHcaptcha ref="hcaptchaRef" sitekey="dc3c0a68-659a-4454-ba90-2c18fed03094" theme="dark"
+                <VueHcaptcha
+ref="hcaptchaRef" sitekey="dc3c0a68-659a-4454-ba90-2c18fed03094" theme="dark"
                     @verify="onVerify" />
             </div>
-            <button type="submit" :disabled="status === 'loading'"
+            <button
+type="submit" :disabled="status === 'loading'"
                 class="bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-4 rounded-xl shadow-lg shadow-cyan-500/50 transition-all duration-300">
                 {{ status === 'loading' ? 'Sending...' : 'Send Message' }}
             </button>
         </form>
-        <p v-if="result"
+        <p
+v-if="result"
             :class="status === 'success' ? 'text-green-400 mt-6 font-semibold' : 'text-red-400 mt-6 font-semibold'">
             {{ result }}
         </p>

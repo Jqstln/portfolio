@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section id="home" class="min-h-screen flex items-center pt-24 md:pt-0">
         <div class="container mx-auto px-6">
@@ -12,11 +13,13 @@
                     </p>
                     <div
                         class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#projects"
+                        <a
+href="#projects"
                             class="bg-cyan-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-cyan-600 transition-all duration-300 w-full sm:w-auto text-center">
                             View My Work
                 </a>
-                        <a href="#contact"
+                        <a
+href="#contact"
                             class="border border-gray-600 text-gray-300 font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 hover:border-gray-700 transition-all duration-300 w-full sm:w-auto text-center">
                             Get in Touch
                         </a>
@@ -34,7 +37,7 @@
   <span class="text-sky-400">name</span>: <span class="text-orange-400">'{{ developer.name }}'</span>,
   <span class="text-sky-400">title</span>: <span class="text-orange-400">'{{ developer.title }}'</span>,
   <span class="text-sky-400">skills</span>: [
-    <span class="text-orange-400" v-for="(s, i) in developer.skills" :key="s">'{{ s }}'{{ i < developer.skills.length - 1 ? ',' : '' }} </span>
+    <span v-for="(s, i) in developer.skills" :key="s" class="text-orange-400">'{{ s }}'{{ i < developer.skills.length - 1 ? ',' : '' }} </span>
   ],
   <span class="text-sky-400">contact</span>: {
     <span class="text-sky-400">email</span>: <span class="text-orange-400">'{{ developer.contact.email }}'</span>,

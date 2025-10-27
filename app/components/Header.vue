@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <header
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -19,21 +20,24 @@
       </div>
       <button 
         v-if="!isMenuOpen"
-        @click="isMenuOpen = true" 
-        class="md:hidden text-gray-300 focus:outline-none z-50"
+        class="md:hidden text-gray-300 focus:outline-none z-50" 
+        @click="isMenuOpen = true"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          <path
+stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
     </nav>
     <transition name="slide-fade">
-      <div v-if="isMenuOpen"
+      <div
+v-if="isMenuOpen"
            class="fixed inset-0 bg-[#0D1117] flex flex-col justify-center items-center space-y-8 text-2xl text-gray-300 font-mono z-40">
-        <button @click="isMenuOpen = false" class="absolute top-6 right-6 text-gray-300">
+        <button class="absolute top-6 right-6 text-gray-300" @click="isMenuOpen = false">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            <path
+stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -41,8 +45,8 @@
           v-for="link in links" 
           :key="link.href" 
           :href="link.href" 
-          @click="isMenuOpen = false"
           class="hover:text-cyan-400 transition-colors duration-300"
+          @click="isMenuOpen = false"
         >
           {{ link.label }}
         </a>
