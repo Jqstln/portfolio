@@ -298,8 +298,8 @@ const submitForm = async () => {
 
 		const response = await $fetch<Web3FormsResponse>("https://api.web3forms.com/submit", {
 			method: "POST",
-			headers: { "Content-Type": "application/json", Accept: "application/json" },
-			body: JSON.stringify(form.value),
+			headers: { "Content-Type": "application/json" },
+			body: form.value,
 		});
 
 		if (response.success) {
