@@ -1,9 +1,8 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
 	<footer class="text-center py-8 text-gray-500">
 		<div class="flex justify-center space-x-6 mb-4">
-			<NuxtLink
-to="https://github.com/Jqstln" target="_blank" rel="noopener"
+			<a
+href="https://github.com/Jqstln" target="_blank" rel="noopener noreferrer"
 				class="hover:text-cyan-400 transition-colors">
 				<svg
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
@@ -20,9 +19,9 @@ d="M9 19c-5 1.5-5-2.5-7-3m14
           7A3.37 3.37 0 0 0 9
           18.13V22" />
 				</svg>
-			</NuxtLink>
-			<NuxtLink
-to="https://www.linkedin.com/in/justinharing/" target="_blank" rel="noopener"
+			</a>
+			<a
+href="https://www.linkedin.com/in/justinharing/" target="_blank" rel="noopener noreferrer"
 				class="hover:text-cyan-400 transition-colors">
 				<svg
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
@@ -35,9 +34,9 @@ d="M16 8a6 6 0 0 1 6
 					<rect x="2" y="9" width="4" height="12" />
 					<circle cx="4" cy="4" r="2" />
 				</svg>
-			</NuxtLink>
-			<NuxtLink
-to="https://x.com/Jqstln" target="_blank" rel="noopener"
+			</a>
+			<a
+href="https://x.com/Jqstln" target="_blank" rel="noopener noreferrer"
 				class="hover:text-cyan-400 transition-colors">
 				<svg
 xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
@@ -46,7 +45,7 @@ xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="cu
 					<path
 						d="m3 21 7.548-7.548M21 3l-7.548 7.548m0 0L8 3H3l7.548 10.452m2.904-2.904L21 21h-5l-5.452-7.548" />
 				</svg>
-			</NuxtLink>
+			</a>
 		</div>
 		<p class="font-mono text-sm">
 			Designed & Built by Justinnn | with love ❤️

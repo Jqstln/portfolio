@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section id="home" class="min-h-screen flex items-center pt-24 md:pt-0">
         <div class="container mx-auto px-6">
@@ -51,9 +50,8 @@ href="#contact"
     </section>
 </template>
 
-<script setup>
-import { ref } from "vue";
-const developer = ref({
+<script setup lang="ts">
+const developer = {
 	name: "Justin",
 	title: "Web Developer + Designer",
 	skills: ["Nuxt.js", "Vue", "Node.js", "TypeScript", "TailwindCSS"],
@@ -61,5 +59,5 @@ const developer = ref({
 		email: "hello@justinnn.dev",
 		github: "/Jqstln",
 	},
-});
+};
 </script>

@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <section id="about" class="py-24">
         <h2 class="text-3xl font-bold text-white mb-12 flex items-center"><span class="text-cyan-400 font-mono text-2xl mr-3">01.</span> About Me <span class="block h-px bg-gray-700 w-full max-w-xs ml-6"/></h2>
@@ -20,7 +19,7 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const recentSkills = [
 	"TypeScript",
 	"Nuxt 4",

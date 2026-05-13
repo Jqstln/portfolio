@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   vite: { plugins: [tailwindcss()] },
-  modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/seo", "@nuxt/eslint"],
+  modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/seo"],
   seo: {
     defaults: {
       title: "Justinnn - Web Dev & Designer",
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   },
   linkChecker: {
     enabled: true,
-    failOn404: "true",
+    failOn404: true,
   },
   robots: {
     blockNonSeoBots: true,

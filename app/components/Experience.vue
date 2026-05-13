@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <section id="experience" class="py-24">
     <h2 class="text-3xl font-bold text-white mb-12 flex items-center"><span class="text-cyan-400 font-mono text-2xl mr-3">02.</span> Work Experience <span class="block h-px bg-gray-700 w-full max-w-xs ml-6" /></h2>
@@ -15,7 +14,7 @@
           {{ job.company }}
         </button>
       </div>
-      <div class="p-4 min-h-[250px] w-full">
+      <div class="p-4 min-h-62.5 w-full">
         <h3 class="text-xl font-bold text-white">{{ current.role }} <span class="text-cyan-400">@ {{ current.company }}</span></h3>
         <p class="text-sm text-gray-500 font-mono mt-1 mb-4">{{ current.duration }}</p>
         <ul class="space-y-3 text-gray-400 list-disc pl-5">
@@ -26,9 +25,8 @@
   </section>
 </template>
 
-<script setup>
-import { ref, computed } from "vue";
-const experience = ref([
+<script setup lang="ts">
+const experience = [
 	{
 		duration: "2023 - Present",
 		role: "Co-Founder & Developer",
@@ -59,8 +57,8 @@ const experience = ref([
 			"Collaborated with other developers on creative software projects.",
 		],
 	},
-]);
+];
 
 const activeExperienceIndex = ref(0);
-const current = computed(() => experience.value[activeExperienceIndex.value]);
+const current = computed(() => experience[activeExperienceIndex.value] ?? experience[0]!);
 </script>

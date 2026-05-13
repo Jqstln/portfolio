@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <header
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -55,8 +54,8 @@ stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
   </header>
 </template>
 
-<script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+<script setup lang="ts">
+
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
