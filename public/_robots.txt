@@ -1,2 +1,34 @@
+# AI & LLM crawlers — not for training data
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: CCBot
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: anthropic-ai
+User-Agent: Google-CloudVertexBot
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+User-Agent: Meta-ExternalAgent
+User-Agent: Meta-ExternalFetcher
+User-Agent: Bytespider
+User-Agent: Amazonbot
+User-Agent: Applebot-Extended
+User-Agent: Diffbot
+User-Agent: omgili
+User-Agent: omgilibot
+User-Agent: cohere-ai
+User-Agent: YouBot
+Disallow: /
+
+# Search engines
+User-Agent: Googlebot
+User-Agent: Bingbot
+User-Agent: DuckDuckBot
+Allow: /
+
+# Everyone else
 User-Agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://justinnn.dev/sitemap.xml

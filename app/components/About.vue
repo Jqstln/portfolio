@@ -1,31 +1,72 @@
 <template>
-    <section id="about" class="py-24">
-        <h2 class="text-3xl font-bold text-white mb-12 flex items-center"><span class="text-cyan-400 font-mono text-2xl mr-3">01.</span> About Me <span class="block h-px bg-gray-700 w-full max-w-xs ml-6"/></h2>
-        <div class="grid md:grid-cols-3 gap-10 items-start">
-            <div class="md:col-span-2 space-y-4 text-lg text-gray-400">
-                <p>I'm a developer and avid gamer based in The Netherlands. Beyond coding, I have a love for animals and enjoy socializing at parties. I thrive on combining creativity and technical skills, whether I'm building an application or diving into my favorite games.</p>
-                <ul class="grid grid-cols-2 gap-2 text-gray-300">
-                    <li v-for="skill in recentSkills" :key="skill" class="flex items-center space-x-2">
-                        <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
-                        <span>{{ skill }}</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="relative w-full max-w-xs mx-auto md:mx-0 h-80">
-                <div class="absolute inset-0 bg-gray-800 rounded-lg transform -rotate-5 transition-transform duration-500 hover:rotate-3"/>
-                <img src="/img/profile.png" alt="Justin" class="relative w-full h-full object-cover rounded-lg shadow-lg rotate-0" >
-            </div>
-        </div>
-    </section>
+	<section id="about" class="relative py-32 mx-auto max-w-6xl px-6">
+		
+		<div class="flex items-center gap-4 mb-12">
+			<span class="font-mono text-xs text-cyan-400 tracking-widest uppercase">01 &mdash; About</span>
+			<div class="h-px flex-1 bg-linear-to-r from-white/10 to-transparent" />
+		</div>
+
+		<h2 class="text-3xl lg:text-4xl font-bold text-white mb-12 tracking-tight">
+			Who's behind the screen
+		</h2>
+
+		<div class="grid md:grid-cols-3 gap-10 items-start">
+			
+			<div class="md:col-span-2 space-y-6">
+				<div class="glass-card p-8 space-y-4">
+					<p class="text-gray-400 leading-relaxed">
+						I'm Justin — a <span class="text-white font-medium">self-taught developer</span> from the Netherlands
+						who started building stuff for Minecraft servers at 14 and never really stopped.
+						These days I build web apps, the occasional Discord bot, and anything else that scratches an itch.
+					</p>
+					<p class="text-gray-400 leading-relaxed">
+						When I'm not at my desk I'm probably gaming, bothering one of my cats, or going down a Wikipedia rabbit hole
+						at 1am. I care a lot about code that's actually readable — and UIs that don't make people squint.
+					</p>
+				</div>
+
+				
+				<div class="glass-card p-6">
+					<p class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">// Technologies I work with</p>
+					<ul class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+						<li
+							v-for="skill in recentSkills"
+							:key="skill"
+							class="flex items-center gap-2 text-sm text-gray-300 group"
+						>
+							<span class="w-1.5 h-1.5 shrink-0 rounded-full bg-cyan-400/60 group-hover:bg-cyan-400 transition-colors duration-300" />
+							{{ skill }}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			
+			<div class="relative w-full max-w-xs mx-auto md:mx-0">
+				
+				<div class="absolute inset-0 rounded-xl border border-cyan-400/20 translate-x-3 translate-y-3" />
+				
+				<div class="absolute inset-0 rounded-xl bg-cyan-500/5 blur-xl translate-x-3 translate-y-3" />
+				<NuxtImg
+					src="/img/profile.png"
+					alt="Justin"
+					class="relative w-full aspect-square object-cover rounded-xl border border-white/8 shadow-2xl shadow-black/60"
+					format="webp"
+				/>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script setup lang="ts">
 const recentSkills = [
 	"TypeScript",
 	"Nuxt 4",
+	"Vue 3",
 	"Node.js",
 	"PostgreSQL",
 	"Tailwind CSS",
 	"Figma",
+	"Docker",
 ];
 </script>

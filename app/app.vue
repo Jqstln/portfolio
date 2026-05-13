@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="container mx-auto px-6 max-w-6xl">
+  <main>
     <Hero />
     <About />
     <Experience />

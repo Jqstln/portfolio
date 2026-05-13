@@ -1,11 +1,178 @@
 @import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-[#0D1117] text-gray-300 font-sans antialiased;
-  }
+@theme {
+  --color-brand-base: #0d1117;
+  --color-brand-surface: #161b22;
+  --color-brand-surface-2: #1c2333;
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+  --color-brand-accent: #22d3ee; /* cyan-400 */
+  --color-brand-accent-dim: rgba(34, 211, 238, 0.15);
+  --color-brand-accent-glow: rgba(34, 211, 238, 0.25);
 
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    background-color: #0d1117;
+    color: rgb(209 213 219); /* gray-300 */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Subtle dot-matrix technical background */
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  code,
+  pre,
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@utility glass-card {
+  background: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+}
+
+@utility glow-cyan {
+  box-shadow:
+    0 0 30px rgba(34, 211, 238, 0.2),
+    0 0 60px rgba(34, 211, 238, 0.08);
+}
+
+@utility glow-cyan-sm {
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.15);
+}
+
+@layer utilities {
+  .section-glow {
+    position: relative;
+  }
+
+  .section-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 80% 50% at 50% -10%,
+      rgba(34, 211, 238, 0.12),
+      transparent
+    );
+    pointer-events: none;
+  }
+}
+
+/* Cursor blink animation for terminal */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1.2s step-end infinite;
+}
+
+/* Gradient border utility */
+@layer utilities {
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(34, 211, 238, 0.4),
+      rgba(255, 255, 255, 0.05),
+      rgba(34, 211, 238, 0.1)
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+/* Timeline node glow */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(34, 211, 238, 0.4),
+      0 0 10px rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(34, 211, 238, 0),
+      0 0 20px rgba(34, 211, 238, 0.3);
+  }
+}
+
+.node-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Slide-fade transition */
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-fade-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-fade-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
 }

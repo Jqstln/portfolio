@@ -7,7 +7,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"ignore": ["**/*.vue", ".nuxt/**", "dist/**", ".output/**"]
+		"includes": ["**/*.ts", "**/*.js"]
 	},
 	"formatter": {
 		"enabled": true,

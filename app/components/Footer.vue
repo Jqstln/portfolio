@@ -1,54 +1,44 @@
 <template>
-	<footer class="text-center py-8 text-gray-500">
-		<div class="flex justify-center space-x-6 mb-4">
-			<a
-href="https://github.com/Jqstln" target="_blank" rel="noopener noreferrer"
-				class="hover:text-cyan-400 transition-colors">
-				<svg
-xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-					<path
-d="M9 19c-5 1.5-5-2.5-7-3m14
-          6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35
-          6.44-1.54 6.44-7A5.44 5.44 0 0 0 20
-          4.77 5.07 5.07 0 0 0 19.91 1S18.73.65
-          16 2.48a13.38 13.38 0 0 0-7
-          0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5
-          4.77a5.44 5.44 0 0 0-1.5
-          3.78c0 5.42 3.3 6.61 6.44
-          7A3.37 3.37 0 0 0 9
-          18.13V22" />
-				</svg>
-			</a>
-			<a
-href="https://www.linkedin.com/in/justinharing/" target="_blank" rel="noopener noreferrer"
-				class="hover:text-cyan-400 transition-colors">
-				<svg
-xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-					<path
-d="M16 8a6 6 0 0 1 6
-          6v7h-4v-7a2 2 0 0 0-2-2
-          2 2 0 0 0-2 2v7h-4v-7a6 6 0 0
-          1 6-6z" />
-					<rect x="2" y="9" width="4" height="12" />
-					<circle cx="4" cy="4" r="2" />
-				</svg>
-			</a>
-			<a
-href="https://x.com/Jqstln" target="_blank" rel="noopener noreferrer"
-				class="hover:text-cyan-400 transition-colors">
-				<svg
-xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-					stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
-					class="feather feather-x">
-					<path
-						d="m3 21 7.548-7.548M21 3l-7.548 7.548m0 0L8 3H3l7.548 10.452m2.904-2.904L21 21h-5l-5.452-7.548" />
-				</svg>
-			</a>
+	<footer class="relative mt-24 border-t border-white/8">
+		
+		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-px bg-linear-to-r from-transparent via-cyan-400/40 to-transparent" />
+
+		<div class="mx-auto max-w-6xl px-6 py-12 flex flex-col items-center gap-6">
+			
+			<div class="flex items-center gap-5">
+				<a
+					href="https://github.com/Jqstln"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="p-2 text-gray-500 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all duration-300"
+					aria-label="GitHub"
+				>
+					<Icon name="simple-icons:github" class="w-5 h-5" />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/justinharing/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="p-2 text-gray-500 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all duration-300"
+					aria-label="LinkedIn"
+				>
+					<Icon name="simple-icons:linkedin" class="w-5 h-5" />
+				</a>
+				<a
+					href="https://x.com/Jqstln"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="p-2 text-gray-500 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all duration-300"
+					aria-label="X (Twitter)"
+				>
+					<Icon name="simple-icons:x" class="w-5 h-5" />
+				</a>
+			</div>
+
+			
+			<p class="font-mono text-xs text-gray-600 tracking-widest uppercase">
+				Designed &amp; Built by <span class="text-gray-400">Justinnn</span> &mdash; with love ❤️
+			</p>
 		</div>
-		<p class="font-mono text-sm">
-			Designed & Built by Justinnn | with love ❤️
-		</p>
 	</footer>
 </template>
