@@ -3,6 +3,12 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineOrganization } from "nuxt-schema-org/schema";
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      web3formsKey: "",
+      hcaptchaSitekey: "",
+    },
+  },
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   ssr: true,
