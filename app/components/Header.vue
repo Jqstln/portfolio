@@ -9,10 +9,7 @@
 				href="#home"
 				class="group flex items-center gap-2 text-xl font-bold text-white hover:text-cyan-400 transition-colors duration-300 tracking-tight"
 			>
-				<span class="relative">
-					Justinnn
-					<span class="text-cyan-400 group-hover:text-white transition-colors duration-300">.</span>
-				</span>
+				<span class="relative">Justinnn<span class="text-cyan-400 group-hover:text-white transition-colors duration-300">.</span></span>
 			</a>
 
 			
