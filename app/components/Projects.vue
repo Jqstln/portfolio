@@ -4,7 +4,7 @@
 		<div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
 			<div class="absolute top-0 right-0 w-150 h-100 rounded-full bg-cyan-500/6 blur-[120px]" />
 		</div>
-		
+
 		<div class="flex items-center gap-4 mb-12">
 			<span class="font-mono text-xs text-cyan-400 tracking-widest uppercase">03 &mdash; Projects</span>
 			<div class="h-px flex-1 bg-linear-to-r from-white/10 to-transparent" />
@@ -157,7 +157,7 @@ const projects: Project[] = [
 			"This site — built with Nuxt 4 and Tailwind v4 for a fast, accessible, and polished developer showcase.",
 		tech: ["Nuxt 4", "Tailwind CSS", "Figma"],
 		github: "https://github.com/Jqstln/portfolio",
-		live: "https://justinnn.dev/",
+		live: "/",
 	},
 	{
 		title: "SpectrumSpark",
