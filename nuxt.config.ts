@@ -5,8 +5,8 @@ import { definePerson } from "nuxt-schema-org/schema";
 export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
-			web3formsKey: "",
-			hcaptchaSitekey: "50b2fe65-b00b-4b9e-ad62-3ba471098be2",
+			turnstileSitekey: "",
+			workerUrl: "",
 		},
 	},
 	compatibilityDate: "2025-07-15",
@@ -67,6 +67,7 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			link: [
+				{ rel: "preconnect", href: "https://challenges.cloudflare.com" },
 				{
 					rel: "icon",
 					type: "image/png",
@@ -81,6 +82,12 @@ export default defineNuxtConfig({
 					href: "/apple-touch-icon.png",
 				},
 				{ rel: "manifest", href: "/site.webmanifest" },
+			],
+			script: [
+				{
+					src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit",
+					defer: true,
+				},
 			],
 			meta: [
 				{ name: "apple-mobile-web-app-title", content: "Justinnn" },

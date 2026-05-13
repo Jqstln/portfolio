@@ -12,14 +12,12 @@
 		"check": "biome check --write app/ --no-errors-on-unmatched"
 	},
 	"dependencies": {
-		"@hcaptcha/vue3-hcaptcha": "^1.3.0",
 		"@nuxt/fonts": "0.14.0",
 		"@nuxt/icon": "2.2.2",
 		"@nuxt/image": "2.0.0",
 		"@nuxtjs/seo": "5.1.3",
 		"@tailwindcss/vite": "^4.1.15",
 		"@takumi-rs/core": "^1.1.2",
-		"nodemailer": "^8.0.7",
 		"nuxt": "^4.1.3",
 		"nuxt-schema-org": "^6.0.4",
 		"tailwindcss": "^4.1.15",

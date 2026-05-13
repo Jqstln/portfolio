@@ -139,14 +139,9 @@
 						<p v-if="fieldErrors.message" class="text-xs text-red-400">{{ fieldErrors.message }}</p>
 					</div>
 
-					
+					<!-- Turnstile widget -->
 					<div class="flex justify-center">
-						<VueHcaptcha
-							ref="hcaptchaRef"
-							:sitekey="sitekey"
-							theme="dark"
-							@verify="onVerify"
-						/>
+						<div ref="turnstileContainer" />
 					</div>
 
 					
@@ -180,43 +175,48 @@
 </template>
 
 <script setup lang="ts">
-// biome-ignore lint/style/useImportType: runtime import needed for Vue template component resolution
-import VueHcaptcha from "@hcaptcha/vue3-hcaptcha";
+interface TurnstileInstance {
+	render: (container: HTMLElement, options: TurnstileOptions) => string;
+	reset: (widgetId: string) => void;
+	remove: (widgetId: string) => void;
+}
 
-interface Web3FormsResponse {
+interface TurnstileOptions {
+	sitekey: string;
+	theme?: "light" | "dark" | "auto";
+	callback?: (token: string) => void;
+	"error-callback"?: () => void;
+	"expired-callback"?: () => void;
+}
+
+declare global {
+	interface Window {
+		turnstile?: TurnstileInstance;
+	}
+}
+
+interface WorkerResponse {
 	success: boolean;
 	message?: string;
 }
 
-// Limits
 const NAME_MAX = 100;
 const EMAIL_MAX = 255;
 const MESSAGE_MAX = 2000;
 const COOLDOWN_SECONDS = 30;
 
 const config = useRuntimeConfig();
-const sitekey = config.public.hcaptchaSitekey as string;
 
-const form = ref({
-	access_key: config.public.web3formsKey as string,
-	subject: "New message from portfolio",
-	name: "",
-	email: "",
-	message: "",
-	"h-captcha-response": "",
-});
-
+const form = ref({ name: "", email: "", message: "" });
 const honeypot = ref("");
 const status = ref("");
 const result = ref("");
 const cooldown = ref(0);
-const hcaptchaRef = ref<InstanceType<typeof VueHcaptcha> | null>(null);
+const turnstileToken = ref("");
+const turnstileContainer = ref<HTMLElement | null>(null);
+const widgetId = ref<string | null>(null);
 
-const fieldErrors = reactive({
-	name: "",
-	email: "",
-	message: "",
-});
+const fieldErrors = reactive({ name: "", email: "", message: "" });
 
 const isDisabled = computed(
 	() => status.value === "loading" || cooldown.value > 0,
@@ -229,15 +229,39 @@ const submitLabel = computed(() => {
 	return "Send Message";
 });
 
-const onVerify = (token: string) => {
-	form.value["h-captcha-response"] = token;
-};
+function renderTurnstile() {
+	if (!turnstileContainer.value || !window.turnstile) return;
+	widgetId.value = window.turnstile.render(turnstileContainer.value, {
+		sitekey: config.public.turnstileSitekey as string,
+		theme: "dark",
+		callback: (token: string) => { turnstileToken.value = token; },
+		"error-callback": () => { turnstileToken.value = ""; },
+		"expired-callback": () => { turnstileToken.value = ""; },
+	});
+}
+
+onMounted(() => {
+	if (window.turnstile) {
+		renderTurnstile();
+	} else {
+		const check = setInterval(() => {
+			if (window.turnstile) {
+				clearInterval(check);
+				renderTurnstile();
+			}
+		}, 100);
+		setTimeout(() => clearInterval(check), 10_000);
+	}
+});
+
+onUnmounted(() => {
+	if (widgetId.value) window.turnstile?.remove(widgetId.value);
+});
 
 function validateFields(): boolean {
 	fieldErrors.name = "";
 	fieldErrors.email = "";
 	fieldErrors.message = "";
-
 	let valid = true;
 
 	if (!form.value.name) {
@@ -275,20 +299,21 @@ function startCooldown() {
 	cooldown.value = COOLDOWN_SECONDS;
 	const interval = setInterval(() => {
 		cooldown.value--;
-		if (cooldown.value <= 0) {
-			clearInterval(interval);
-		}
+		if (cooldown.value <= 0) clearInterval(interval);
 	}, 1000);
 }
 
-const submitForm = async () => {
-	// Honeypot check — bots fill this field
-	if (honeypot.value) return;
+function resetTurnstile() {
+	if (widgetId.value) window.turnstile?.reset(widgetId.value);
+	turnstileToken.value = "";
+}
 
+const submitForm = async () => {
+	if (honeypot.value) return;
 	if (!validateFields()) return;
 
-	if (!form.value["h-captcha-response"]) {
-		result.value = "Please complete the hCaptcha.";
+	if (!turnstileToken.value) {
+		result.value = "Please complete the security check.";
 		status.value = "error";
 		return;
 	}
@@ -296,11 +321,19 @@ const submitForm = async () => {
 	try {
 		status.value = "loading";
 
-		const response = await $fetch<Web3FormsResponse>("https://api.web3forms.com/submit", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: form.value,
-		});
+		const response = await $fetch<WorkerResponse>(
+			config.public.workerUrl as string,
+			{
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: {
+					name: form.value.name,
+					email: form.value.email,
+					message: form.value.message,
+					turnstileToken: turnstileToken.value,
+				},
+			},
+		);
 
 		if (response.success) {
 			status.value = "success";
@@ -308,17 +341,18 @@ const submitForm = async () => {
 			form.value.name = "";
 			form.value.email = "";
 			form.value.message = "";
-			form.value["h-captcha-response"] = "";
-			hcaptchaRef.value?.reset();
+			resetTurnstile();
 			startCooldown();
 		} else {
 			status.value = "error";
 			result.value = response.message ?? "Something went wrong. Try again.";
+			resetTurnstile();
 		}
 	} catch (error) {
 		console.error(error);
 		status.value = "error";
 		result.value = "Something went wrong. Try again.";
+		resetTurnstile();
 	} finally {
 		if (status.value !== "success") {
 			setTimeout(() => {

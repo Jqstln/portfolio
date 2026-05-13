@@ -30,7 +30,14 @@ jobs:
       - name: Generate Nuxt site
         run: bun run build
         env:
-          NUXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
+          NUXT_PUBLIC_TURNSTILE_SITEKEY: ${{ secrets.TURNSTILE_SITEKEY }}
+          NUXT_PUBLIC_WORKER_URL: ${{ secrets.WORKER_URL }}
+
+      - name: Inject mailer secret
+        env:
+          MAILER_SECRET: ${{ secrets.MAILER_SECRET }}
+        run: |
+          sed -i "s/MAILER_SECRET_PLACEHOLDER/${MAILER_SECRET}/g" .output/public/mailer.php
 
       - name: Deploy via FTP
         if: ${{ github.ref == 'refs/heads/main' }}

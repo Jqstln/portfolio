@@ -1,0 +1,11 @@
+name = "portfolio-contact"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# The URL of the PHP mailer on your DirectAdmin server
+MAILER_URL = "https://justinnn.dev/mailer.php"
+
+# Secrets — set via Wrangler CLI before deploying:
+#   wrangler secret put TURNSTILE_SECRET_KEY
+#   wrangler secret put MAILER_SECRET
