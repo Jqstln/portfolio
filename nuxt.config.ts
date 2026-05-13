@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			web3formsKey: "",
-			hcaptchaSitekey: "",
+			hcaptchaSitekey: "50b2fe65-b00b-4b9e-ad62-3ba471098be2",
 		},
 	},
 	compatibilityDate: "2025-07-15",

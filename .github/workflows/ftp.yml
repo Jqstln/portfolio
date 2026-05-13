@@ -30,7 +30,6 @@ jobs:
       - name: Generate Nuxt site
         run: bun run build
         env:
-          NUXT_PUBLIC_HCAPTCHA_SITEKEY: ${{ secrets.HCAPTCHA_SITEKEY }}
           NUXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
 
       - name: Deploy via FTP
