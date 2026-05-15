@@ -5,7 +5,7 @@ import { definePerson } from "nuxt-schema-org/schema";
 export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
-			turnstileSitekey: "1x00000000000000000000AA",
+			turnstileSitekey: "",
 			workerUrl: "",
 		},
 	},
