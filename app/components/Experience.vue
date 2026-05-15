@@ -1,40 +1,29 @@
 <template>
 	<section id="experience" class="relative py-32 mx-auto max-w-6xl px-6">
-		
 		<div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
 			<div class="absolute top-1/2 -left-64 w-100 h-100 rounded-full bg-cyan-500/6 blur-[100px]" />
 		</div>
-
-		
 		<div class="flex items-center gap-4 mb-12">
 			<span class="font-mono text-xs text-cyan-400 tracking-widest uppercase">02 &mdash; Experience</span>
 			<div class="h-px flex-1 bg-linear-to-r from-white/10 to-transparent" />
 		</div>
-
 		<h2 class="text-3xl lg:text-4xl font-bold text-white mb-16 tracking-tight">
 			Where I've worked
 		</h2>
-
-		
 		<div class="relative">
-			
 			<div class="absolute left-4 top-0 bottom-0 w-px bg-linear-to-b from-cyan-400/50 via-white/10 to-transparent" aria-hidden="true" />
-
 			<div class="space-y-12">
 				<div
 					v-for="(job, index) in experience"
 					:key="job.company"
 					class="relative pl-16 group"
 				>
-					
 					<div
 						class="absolute left-0 top-1 w-8 h-8 rounded-full glass-card border border-cyan-400/40 flex items-center justify-center transition-all duration-300 group-hover:border-cyan-400/80"
 						:class="index === 0 ? 'node-glow' : ''"
 					>
 						<div class="w-2 h-2 rounded-full bg-cyan-400" />
 					</div>
-
-					
 					<div class="glass-card p-6 transition-all duration-300 hover:border-white/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/40">
 						<div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
 							<div>

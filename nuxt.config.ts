@@ -5,12 +5,13 @@ import { definePerson } from "nuxt-schema-org/schema";
 export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
-			turnstileSitekey: "",
+			turnstileSitekey: "1x00000000000000000000AA",
 			workerUrl: "",
 		},
 	},
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
+	ogImage: { zeroRuntime: true },
 	ssr: true,
 	nitro: {
 		prerender: {
@@ -20,12 +21,20 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ["~/assets/css/main.css"],
-	vite: { plugins: [tailwindcss()] },
+	vite: { 
+		plugins: [tailwindcss()],
+		optimizeDeps: {
+			include: [
+				'@vue/devtools-core',
+				'@vue/devtools-kit'
+			]
+		} 
+	},
 	modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxtjs/seo"],
 	fonts: {
 		families: [
-			{ name: "Inter", weights: [400, 500, 600, 700, 800] },
-			{ name: "JetBrains Mono", weights: [400, 500] },
+			{ name: "Inter", weights: [400, 500, 600, 700, 800], display: 'swap' },
+			{ name: "JetBrains Mono", weights: [400, 500], display: 'swap' },
 		],
 	},
 	site: {
@@ -82,10 +91,13 @@ export default defineNuxtConfig({
 					href: "/apple-touch-icon.png",
 				},
 				{ rel: "manifest", href: "/site.webmanifest" },
+				{ rel: "preconnect", href: "https://challenges.cloudflare.com" },
+        		{ rel: "dns-prefetch", href: "https://challenges.cloudflare.com" },
 			],
 			script: [
 				{
 					src: "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit",
+					async: 'true',
 					defer: true,
 				},
 			],

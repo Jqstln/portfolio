@@ -1,16 +1,12 @@
 <template>
 	<section id="contact" class="relative py-32 mx-auto max-w-6xl px-6">
-		
 		<div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
 			<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-125 h-75 rounded-full bg-cyan-500/8 blur-[100px]" />
 		</div>
-
-		
 		<div class="flex items-center gap-4 mb-16">
 			<span class="font-mono text-xs text-cyan-400 tracking-widest uppercase">04 &mdash; Contact</span>
 			<div class="h-px flex-1 bg-linear-to-r from-white/10 to-transparent" />
 		</div>
-
 		<div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
 			
 			<div class="lg:col-span-2 space-y-8">
@@ -23,8 +19,6 @@
 						I read every email and reply personally.
 					</p>
 				</div>
-
-				
 				<div class="space-y-3">
 					<a
 						href="mailto:hello@justinnn.dev"
@@ -58,22 +52,17 @@
 						justinharing
 					</a>
 				</div>
-
-				
 				<p class="text-xs font-mono text-gray-600 border-l-2 border-white/10 pl-3">
 					Typical response time:<br>
 					<span class="text-gray-400">within 24 hours</span>
 				</p>
 			</div>
-
-			
 			<div class="lg:col-span-3">
 				<form
 					class="glass-card p-8 flex flex-col gap-4"
 					novalidate
 					@submit.prevent="submitForm"
 				>
-					
 					<input
 						v-model="honeypot"
 						name="botcheck"
@@ -83,8 +72,6 @@
 						aria-hidden="true"
 						class="hidden"
 					>
-
-					
 					<div class="space-y-1.5">
 						<label for="contact-name" class="text-xs font-mono text-gray-500 uppercase tracking-wider">Name</label>
 						<input
@@ -101,8 +88,6 @@
 						>
 						<p v-if="fieldErrors.name" class="text-xs text-red-400">{{ fieldErrors.name }}</p>
 					</div>
-
-					
 					<div class="space-y-1.5">
 						<label for="contact-email" class="text-xs font-mono text-gray-500 uppercase tracking-wider">Email</label>
 						<input
@@ -119,8 +104,6 @@
 						>
 						<p v-if="fieldErrors.email" class="text-xs text-red-400">{{ fieldErrors.email }}</p>
 					</div>
-
-					
 					<div class="space-y-1.5">
 						<div class="flex justify-between items-center">
 							<label for="contact-message" class="text-xs font-mono text-gray-500 uppercase tracking-wider">Message</label>
@@ -138,13 +121,9 @@
 						/>
 						<p v-if="fieldErrors.message" class="text-xs text-red-400">{{ fieldErrors.message }}</p>
 					</div>
-
-					<!-- Turnstile widget -->
 					<div class="flex justify-center">
 						<div ref="turnstileContainer" />
-					</div>
-
-					
+					</div>	
 					<button
 						type="submit"
 						:disabled="isDisabled"
@@ -154,14 +133,10 @@
 						<Icon v-else-if="status === 'success'" name="lucide:check" class="w-4 h-4" />
 						<span>{{ submitLabel }}</span>
 					</button>
-
-					
 					<p v-if="cooldown > 0" class="text-center text-xs font-mono text-gray-600">
 						Next message in <span class="text-gray-400">{{ cooldown }}s</span>
 					</p>
 				</form>
-
-				
 				<p
 					v-if="result"
 					class="mt-4 text-sm text-center font-mono"
