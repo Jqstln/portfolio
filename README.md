@@ -15,7 +15,7 @@ Welcome! This is my portfolio repository showcasing projects and skills.
 - Automated Deployment with GitHub Actions
 
 ## Prerequisites
-- Node.js >=18.18 ([nodejs.org](https://nodejs.org/))
+- Node.js >=22 ([nodejs.org](https://nodejs.org/))
 - Git ([git-scm.com](https://git-scm.com/))
 - npm/pnpm/yarn/bun
 
@@ -31,12 +31,12 @@ npm install # or any choice of package manager (e.g., pnpm, yarn, or bun)
 ```
 3. Start the development server:
 ```bash
-npm run dev
+npm run dev # or any choice of package manager (e.g., pnpm, yarn, or bun)
 ```
 Visit then ``http://localhost:3000`` to view the portfolio.
 
 # License
-© 2025 Justinnn. All rights reserved.
+© 2026 Justinnn. All rights reserved.
 
 This repository is made publicly available for **portfolio and personal demonstration purposes only**.  
 
